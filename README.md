@@ -249,15 +249,10 @@ If you like this project, consider giving the repository a ⭐ on GitHub.
 ![EduSpace dashboard_6](docs/screenshots/dashboard_6.png)
 ![EduSpace dashboard_7](docs/screenshots/dashboard_7.png)
 ![EduSpace dashboard_8](docs/screenshots/dashboard_8.png)
-docs/screenshots/dashboard_9.png
-docs/screenshots/dashboard_10.png
-docs/screenshots/dashboard_11.png
-docs/screenshots/dashboard_12.png
-docs/screenshots/dashboard_13.png
-docs/screenshots/dashboard_14.png
-docs/screenshots/dashboard_15.png
-
-
-
-
-
+![EduSpace dashboard_9](docs/screenshots/dashboard_9.png)
+![EduSpace dashboard_10](docs/screenshots/dashboard_10.png)
+![EduSpace dashboard_11](docs/screenshots/dashboard_11.png)
+![EduSpace dashboard_12](docs/screenshots/dashboard_12.png)
+![EduSpace dashboard_13](docs/screenshots/dashboard_13.png)
+![EduSpace dashboard_14](docs/screenshots/dashboard_14.png)
+![EduSpace dashboard_15](docs/screenshots/dashboard_15.png)
