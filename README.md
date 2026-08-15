@@ -241,14 +241,14 @@ Built as a student portal / learning dashboard project.
 
 If you like this project, consider giving the repository a ⭐ on GitHub.
 
-(docs/screenshots/dashboard_1.png)
-docs/screenshots/dashboard_2.png
-docs/screenshots/dashboard_3.png
-docs/screenshots/dashboard_4.png
-docs/screenshots/dashboard_5.png
-docs/screenshots/dashboard_6.png
-docs/screenshots/dashboard_7.png
-docs/screenshots/dashboard_8.png
+![EduSpace dashboard_1](docs/screenshots/dashboard_1.png)
+![EduSpace dashboard_2](docs/screenshots/dashboard_2.png)
+![EduSpace dashboard_3](docs/screenshots/dashboard_3.png)
+![EduSpace dashboard_4](docs/screenshots/dashboard_4.png)
+![EduSpace dashboard_5](docs/screenshots/dashboard_5.png)
+![EduSpace dashboard_6](docs/screenshots/dashboard_6.png)
+![EduSpace dashboard_7](docs/screenshots/dashboard_7.png)
+![EduSpace dashboard_8](docs/screenshots/dashboard_8.png)
 docs/screenshots/dashboard_9.png
 docs/screenshots/dashboard_10.png
 docs/screenshots/dashboard_11.png
