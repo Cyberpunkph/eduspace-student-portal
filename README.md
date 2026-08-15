@@ -184,17 +184,6 @@ Save your main screenshot as:
 docs/screenshots/dashboard.png
 ```
 
-Recommended additional files:
-
-```text
-docs/screenshots/login.png
-docs/screenshots/courses.png
-docs/screenshots/assignments.png
-docs/screenshots/schedule.png
-docs/screenshots/profile.png
-docs/screenshots/mobile.png
-```
-
 You can display an additional screenshot in this README with:
 
 ```md
