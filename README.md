@@ -16,9 +16,6 @@ EduSpace is a multi-page student portal designed to make everyday learning activ
 The project is built without a JavaScript framework or build system, making it easy to understand, customize, and deploy as a static website.
 
 ## 📸 Preview
-```text
-docs/screenshots/dashboard.png
-```
 
 Then this image will appear automatically in the README:
 
