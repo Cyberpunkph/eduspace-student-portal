@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Saved Lessons | EduSpace</title>
+
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- SHARED SYSTEMS -->
+
+  <script src="theme.js"></script>
+
+  <script src="data.js"></script>
+
+
+  <!-- PAGE CSS -->
+
+  <link
+    rel="stylesheet"
+    href="bookmarks.css"
+  >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     MOBILE OVERLAY
+===================================================== -->
+
+<div
+  class="mobile-overlay"
+  id="mobileOverlay"
+></div>
+
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside
+  class="sidebar"
+  id="sidebar"
+>
+
+
+  <div class="logo">
+
+    <div class="logo-icon">
+      🎓
+    </div>
+
+    <span>
+      EduSpace
+    </span>
+
+  </div>
+
+
+
+  <nav class="sidebar-nav">
+
+
+    <a
+      href="dashboard.html"
+      class="nav-link"
+    >
+      <span class="nav-icon">⌂</span>
+      <span>Dashboard</span>
+    </a>
+
+
+    <a
+      href="courses.html"
+      class="nav-link"
+    >
+      <span class="nav-icon">📚</span>
+      <span>My Courses</span>
+    </a>
+
+
+    <a
+      href="assignments.html"
+      class="nav-link"
+    >
+      <span class="nav-icon">📝</span>
+      <span>Assignments</span>
+    </a>
+
+
+    <a
+      href="dashboard.html#grades"
+      class="nav-link"
+    >
+      <span class="nav-icon">📊</span>
+      <span>Grades</span>
+    </a>
+
+
+    <a
+      href="schedule.html"
+      class="nav-link"
+    >
+      <span class="nav-icon">📅</span>
+      <span>Schedule</span>
+    </a>
+
+
+    <a
+      href="messages.html"
+      class="nav-link"
+    >
+      <span class="nav-icon">💬</span>
+      <span>Messages</span>
+    </a>
+
+
+    <a
+      href="achievements.html"
+      class="nav-link"
+    >
+      <span class="nav-icon">🏆</span>
+      <span>Achievements</span>
+    </a>
+
+
+    <a
+      href="streak.html"
+      class="nav-link"
+    >
+      <span class="nav-icon">🔥</span>
+      <span>Learning Streak</span>
+    </a>
+
+
+    <a
+      href="bookmarks.html"
+      class="nav-link active"
+    >
+      <span class="nav-icon">🔖</span>
+      <span>Saved Lessons</span>
+    </a>
+
+
+  </nav>
+
+
+</aside>
+
+
+
+<!-- =====================================================
+     APP
+===================================================== -->
+
+<div class="app-shell">
+
+
+
+<!-- =====================================================
+     TOPBAR
+===================================================== -->
+
+<header class="topbar">
+
+
+  <div class="topbar-left">
+
+
+    <button
+      class="menu-button"
+      id="menuButton"
+      type="button"
+      aria-label="Open navigation"
+    >
+      ☰
+    </button>
+
+
+    <div>
+
+      <span class="topbar-label">
+        STUDENT PORTAL
+      </span>
+
+      <h1>
+        Saved Lessons
+      </h1>
+
+    </div>
+
+
+  </div>
+
+
+
+  <a
+    href="profile.html"
+    class="student-profile"
+  >
+
+
+    <div
+      class="student-avatar"
+      id="studentAvatar"
+    >
+      ST
+    </div>
+
+
+    <div>
+
+      <strong id="studentName">
+        Student
+      </strong>
+
+      <span>
+        Student
+      </span>
+
+    </div>
+
+
+  </a>
+
+
+</header>
+
+
+
+<!-- =====================================================
+     PAGE
+===================================================== -->
+
+<main class="bookmarks-page">
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="bookmarks-hero">
+
+
+  <div>
+
+
+    <span class="hero-label">
+      🔖 SAVED LESSONS
+    </span>
+
+
+    <h2>
+
+      Keep important lessons
+
+      <span>
+        close at hand.
+      </span>
+
+    </h2>
+
+
+    <p>
+
+      Bookmark lessons you want to review later
+      and return directly to where you left off.
+
+    </p>
+
+
+  </div>
+
+
+
+  <div class="hero-bookmark">
+    🔖
+  </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     STATS
+===================================================== -->
+
+<section class="bookmark-stats">
+
+
+  <article class="stat-card">
+
+
+    <div class="stat-icon">
+      🔖
+    </div>
+
+
+    <div>
+
+      <span>
+        Saved Lessons
+      </span>
+
+      <strong id="savedLessonCount">
+        0
+      </strong>
+
+    </div>
+
+
+  </article>
+
+
+
+  <article class="stat-card">
+
+
+    <div class="stat-icon">
+      📚
+    </div>
+
+
+    <div>
+
+      <span>
+        Courses Saved
+      </span>
+
+      <strong id="savedCourseCount">
+        0
+      </strong>
+
+    </div>
+
+
+  </article>
+
+
+
+  <article class="stat-card">
+
+
+    <div class="stat-icon">
+      ✅
+    </div>
+
+
+    <div>
+
+      <span>
+        Completed Saved
+      </span>
+
+      <strong id="completedSavedCount">
+        0
+      </strong>
+
+    </div>
+
+
+  </article>
+
+
+
+  <article class="stat-card">
+
+
+    <div class="stat-icon">
+      🎬
+    </div>
+
+
+    <div>
+
+      <span>
+        Watched Progress
+      </span>
+
+      <strong id="averageWatchProgress">
+        0%
+      </strong>
+
+    </div>
+
+
+  </article>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     SAVED LESSONS
+===================================================== -->
+
+<section class="saved-card">
+
+
+  <div class="saved-header">
+
+
+    <div>
+
+      <span>
+        YOUR COLLECTION
+      </span>
+
+      <h2>
+        Bookmarked Lessons
+      </h2>
+
+    </div>
+
+
+
+    <div class="bookmark-search">
+
+
+      <span>
+        🔍
+      </span>
+
+
+      <input
+        id="bookmarkSearch"
+        type="search"
+        placeholder="Search saved lessons..."
+        autocomplete="off"
+      >
+
+
+    </div>
+
+
+  </div>
+
+
+
+  <!-- FILTERS -->
+
+  <div class="bookmark-filters">
+
+
+    <button
+      class="bookmark-filter active"
+      type="button"
+      data-filter="all"
+    >
+      All
+    </button>
+
+
+    <button
+      class="bookmark-filter"
+      type="button"
+      data-filter="in-progress"
+    >
+      In Progress
+    </button>
+
+
+    <button
+      class="bookmark-filter"
+      type="button"
+      data-filter="completed"
+    >
+      Completed
+    </button>
+
+
+  </div>
+
+
+
+  <!-- GRID -->
+
+  <div
+    class="bookmark-grid"
+    id="bookmarkGrid"
+  ></div>
+
+
+
+  <!-- EMPTY -->
+
+  <div
+    class="bookmark-empty"
+    id="bookmarkEmpty"
+  >
+
+
+    <div class="empty-icon">
+      🔖
+    </div>
+
+
+    <h3>
+      No saved lessons yet
+    </h3>
+
+
+    <p>
+
+      Open a course and press
+      <strong>Save Lesson</strong>
+      to add it here.
+
+    </p>
+
+
+    <a href="courses.html">
+      Browse Courses
+    </a>
+
+
+  </div>
+
+
+</section>
+
+
+</main>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     REMOVE CONFIRMATION
+===================================================== -->
+
+<div
+  class="confirm-modal"
+  id="confirmModal"
+>
+
+
+  <div class="confirm-dialog">
+
+
+    <div class="confirm-icon">
+      🔖
+    </div>
+
+
+    <h3>
+      Remove bookmark?
+    </h3>
+
+
+    <p id="confirmMessage">
+      This lesson will be removed from your saved lessons.
+    </p>
+
+
+    <div class="confirm-actions">
+
+
+      <button
+        class="cancel-button"
+        id="cancelRemoveButton"
+        type="button"
+      >
+        Cancel
+      </button>
+
+
+      <button
+        class="remove-button"
+        id="confirmRemoveButton"
+        type="button"
+      >
+        Remove
+      </button>
+
+
+    </div>
+
+
+  </div>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     TOAST
+===================================================== -->
+
+<div
+  class="bookmark-toast"
+  id="bookmarkToast"
+></div>
+
+
+
+<script src="bookmarks.js"></script>
+<script src="avatar.js"></script>
+
+
+</body>
+
+</html>

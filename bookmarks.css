@@ -1,0 +1,1506 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  min-height: 100vh;
+
+  overflow-x: hidden;
+
+  font-family: "Inter", sans-serif;
+
+  color: #202438;
+
+  background: #f6f7fb;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+
+button,
+input {
+  font: inherit;
+}
+
+
+button {
+  cursor: pointer;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  z-index: 1000;
+
+  padding: 26px 18px;
+
+  overflow-y: auto;
+
+  border-right: 1px solid #e8eaf1;
+
+  background: #ffffff;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+
+.logo {
+  padding: 0 10px;
+
+  margin-bottom: 34px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+
+.logo-icon {
+  width: 38px;
+  height: 38px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 12px;
+
+  background: #eef0ff;
+}
+
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+
+.nav-link {
+  min-height: 47px;
+
+  padding: 0 14px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  border-radius: 12px;
+
+  color: #737886;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition: 0.2s ease;
+}
+
+
+.nav-link:hover {
+  color: #5865d8;
+
+  background: #f3f4ff;
+}
+
+
+.nav-link.active {
+  color: #5965d8;
+
+  background: #eef0ff;
+
+  font-weight: 600;
+}
+
+
+.nav-icon {
+  width: 22px;
+
+  text-align: center;
+
+  font-size: 17px;
+}
+
+
+
+/* =====================================================
+   MOBILE OVERLAY
+===================================================== */
+
+.mobile-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 950;
+
+  visibility: hidden;
+
+  opacity: 0;
+
+  background:
+    rgba(17,20,31,0.42);
+
+  transition: 0.25s ease;
+}
+
+
+.mobile-overlay.show {
+  visibility: visible;
+
+  opacity: 1;
+}
+
+
+
+/* =====================================================
+   APP
+===================================================== */
+
+.app-shell {
+  min-height: 100vh;
+
+  margin-left: 250px;
+}
+
+
+
+/* =====================================================
+   TOPBAR
+===================================================== */
+
+.topbar {
+  min-height: 82px;
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 800;
+
+  padding: 14px 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  border-bottom: 1px solid #e8eaf1;
+
+  background:
+    rgba(255,255,255,0.94);
+
+  backdrop-filter: blur(16px);
+}
+
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+}
+
+
+.topbar-label {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #9095a3;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+}
+
+
+.topbar h1 {
+  font-size: 22px;
+}
+
+
+.menu-button {
+  width: 40px;
+  height: 40px;
+
+  display: none;
+
+  border: 1px solid #e5e7ef;
+
+  border-radius: 11px;
+
+  color: #555c6b;
+
+  background: #ffffff;
+}
+
+
+.student-profile {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+
+.student-profile strong,
+.student-profile span {
+  display: block;
+}
+
+
+.student-profile strong {
+  margin-bottom: 2px;
+
+  font-size: 12px;
+}
+
+
+.student-profile span {
+  color: #9196a4;
+
+  font-size: 10px;
+}
+
+
+.student-avatar {
+  width: 38px;
+  height: 38px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6874db,
+      #835fd8
+    );
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.bookmarks-page {
+  width: min(1500px, 100%);
+
+  margin: auto;
+
+  padding: 28px 32px 50px;
+}
+
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.bookmarks-hero {
+  min-height: 220px;
+
+  position: relative;
+
+  padding: 34px 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  color: #ffffff;
+
+  background:
+    radial-gradient(
+      circle at 84% 15%,
+      rgba(255,255,255,0.17),
+      transparent 29%
+    ),
+    linear-gradient(
+      135deg,
+      #536fd7,
+      #715fd5,
+      #8c65d4
+    );
+
+  box-shadow:
+    0 20px 45px
+    rgba(80,88,175,0.15);
+}
+
+
+.bookmarks-hero::after {
+  content: "";
+
+  width: 300px;
+  height: 300px;
+
+  position: absolute;
+
+  right: -90px;
+  bottom: -205px;
+
+  border: 1px solid rgba(255,255,255,0.14);
+
+  border-radius: 50%;
+}
+
+
+.bookmarks-hero > div {
+  position: relative;
+
+  z-index: 2;
+}
+
+
+.hero-label {
+  display: inline-flex;
+
+  padding: 7px 10px;
+
+  margin-bottom: 13px;
+
+  border-radius: 999px;
+
+  background:
+    rgba(255,255,255,0.14);
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+}
+
+
+.bookmarks-hero h2 {
+  max-width: 650px;
+
+  margin-bottom: 10px;
+
+  font-size:
+    clamp(28px, 4vw, 42px);
+
+  letter-spacing: -1.2px;
+}
+
+
+.bookmarks-hero h2 span {
+  color: #dcdfff;
+}
+
+
+.bookmarks-hero p {
+  max-width: 600px;
+
+  color:
+    rgba(255,255,255,0.72);
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+
+.hero-bookmark {
+  width: 110px;
+  height: 110px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.13);
+
+  border-radius: 32px;
+
+  background:
+    rgba(255,255,255,0.1);
+
+  font-size: 48px;
+}
+
+
+
+/* =====================================================
+   STATS
+===================================================== */
+
+.bookmark-stats {
+  margin-top: 22px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0,1fr));
+
+  gap: 15px;
+}
+
+
+.stat-card {
+  min-width: 0;
+
+  padding: 18px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  border: 1px solid #e6e8ef;
+
+  border-radius: 16px;
+
+  background: #ffffff;
+}
+
+
+.stat-icon {
+  width: 45px;
+  height: 45px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 13px;
+
+  background: #f0f2ff;
+
+  font-size: 19px;
+}
+
+
+.stat-card span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #959aa8;
+
+  font-size: 9px;
+}
+
+
+.stat-card strong {
+  color: #262b3e;
+
+  font-size: 20px;
+}
+
+
+
+/* =====================================================
+   SAVED CARD
+===================================================== */
+
+.saved-card {
+  margin-top: 22px;
+
+  padding: 25px;
+
+  border: 1px solid #e5e7ef;
+
+  border-radius: 20px;
+
+  background: #ffffff;
+}
+
+
+.saved-header {
+  margin-bottom: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+
+.saved-header
+> div:first-child
+> span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #9ca1af;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+
+.saved-header h2 {
+  font-size: 18px;
+}
+
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.bookmark-search {
+  width: min(320px, 100%);
+
+  padding: 0 12px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  border: 1px solid #e1e4ec;
+
+  border-radius: 11px;
+
+  background: #fafbfc;
+}
+
+
+.bookmark-search input {
+  width: 100%;
+  height: 41px;
+
+  border: none;
+
+  outline: none;
+
+  color: #303541;
+
+  background: transparent;
+
+  font-size: 11px;
+}
+
+
+
+/* =====================================================
+   FILTERS
+===================================================== */
+
+.bookmark-filters {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-bottom: 21px;
+}
+
+
+.bookmark-filter {
+  padding: 8px 13px;
+
+  border: 1px solid #e2e4ec;
+
+  border-radius: 999px;
+
+  color: #747987;
+
+  background: #ffffff;
+
+  font-size: 9px;
+  font-weight: 600;
+}
+
+
+.bookmark-filter.active {
+  color: #ffffff;
+
+  border-color: #6874db;
+
+  background: #6874db;
+}
+
+
+
+/* =====================================================
+   GRID
+===================================================== */
+
+.bookmark-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0,1fr));
+
+  gap: 16px;
+}
+
+
+
+/* =====================================================
+   BOOKMARK CARD
+===================================================== */
+
+.bookmark-card {
+  min-width: 0;
+
+  overflow: hidden;
+
+  border: 1px solid #e5e7ef;
+
+  border-radius: 17px;
+
+  background: #ffffff;
+
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+
+.bookmark-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 14px 30px
+    rgba(50,58,100,0.07);
+}
+
+
+.bookmark-card-cover {
+  min-height: 110px;
+
+  position: relative;
+
+  padding: 16px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6572dc,
+      #7d5ed6
+    );
+}
+
+
+.bookmark-card-cover.mathematics {
+  background:
+    linear-gradient(
+      135deg,
+      #4c86d9,
+      #6468d4
+    );
+}
+
+
+.bookmark-card-cover.ui-ux {
+  background:
+    linear-gradient(
+      135deg,
+      #df8452,
+      #d65d91
+    );
+}
+
+
+.course-label {
+  padding: 6px 9px;
+
+  border-radius: 999px;
+
+  background:
+    rgba(255,255,255,0.14);
+
+  font-size: 7px;
+  font-weight: 700;
+}
+
+
+.course-icon {
+  font-size: 31px;
+}
+
+
+.bookmark-card-body {
+  padding: 18px;
+}
+
+
+.bookmark-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+
+  margin-bottom: 9px;
+}
+
+
+.bookmark-meta span {
+  color: #999eab;
+
+  font-size: 8px;
+}
+
+
+.saved-badge {
+  padding: 5px 7px;
+
+  border-radius: 999px;
+
+  color: #5e69d2 !important;
+
+  background: #eef0ff;
+
+  font-weight: 700;
+}
+
+
+.bookmark-card h3 {
+  margin-bottom: 7px;
+
+  color: #2a2e42;
+
+  font-size: 14px;
+}
+
+
+.bookmark-card p {
+  color: #9297a5;
+
+  font-size: 9px;
+
+  line-height: 1.6;
+}
+
+
+
+/* =====================================================
+   WATCH PROGRESS
+===================================================== */
+
+.bookmark-progress {
+  margin-top: 16px;
+}
+
+
+.bookmark-progress-heading {
+  margin-bottom: 7px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: #969ba8;
+
+  font-size: 8px;
+}
+
+
+.bookmark-progress-heading strong {
+  color: #626dd3;
+}
+
+
+.bookmark-progress-track {
+  height: 6px;
+
+  overflow: hidden;
+
+  border-radius: 999px;
+
+  background: #eceef4;
+}
+
+
+.bookmark-progress-fill {
+  height: 100%;
+
+  border-radius: inherit;
+
+  background:
+    linear-gradient(
+      90deg,
+      #6571db,
+      #805fd8
+    );
+}
+
+
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+.lesson-status-row {
+  margin-top: 13px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+}
+
+
+.lesson-status {
+  padding: 6px 8px;
+
+  border-radius: 999px;
+
+  font-size: 7px;
+  font-weight: 700;
+}
+
+
+.lesson-status.completed {
+  color: #37916d;
+
+  background: #e7f7ef;
+}
+
+
+.lesson-status.in-progress {
+  color: #626dd2;
+
+  background: #eef0ff;
+}
+
+
+.lesson-status.not-started {
+  color: #858a97;
+
+  background: #f0f1f5;
+}
+
+
+.saved-date {
+  color: #a1a5b1;
+
+  font-size: 7px;
+}
+
+
+
+/* =====================================================
+   ACTIONS
+===================================================== */
+
+.bookmark-actions {
+  margin-top: 16px;
+
+  display: flex;
+
+  gap: 8px;
+}
+
+
+.open-lesson-button,
+.remove-bookmark-button {
+  min-height: 38px;
+
+  border-radius: 10px;
+
+  font-size: 9px;
+  font-weight: 600;
+}
+
+
+.open-lesson-button {
+  flex: 1;
+
+  border: none;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6572dc,
+      #785bd4
+    );
+}
+
+
+.remove-bookmark-button {
+  width: 40px;
+
+  flex-shrink: 0;
+
+  border: 1px solid #e4e6ed;
+
+  color: #8e93a0;
+
+  background: #ffffff;
+}
+
+
+.remove-bookmark-button:hover {
+  color: #d05e6d;
+
+  background: #fff4f5;
+}
+
+
+
+/* =====================================================
+   EMPTY
+===================================================== */
+
+.bookmark-empty {
+  display: none;
+
+  padding: 65px 20px;
+
+  text-align: center;
+}
+
+
+.bookmark-empty.show {
+  display: block;
+}
+
+
+.empty-icon {
+  margin-bottom: 12px;
+
+  font-size: 39px;
+}
+
+
+.bookmark-empty h3 {
+  margin-bottom: 7px;
+
+  font-size: 14px;
+}
+
+
+.bookmark-empty p {
+  margin-bottom: 18px;
+
+  color: #969ba8;
+
+  font-size: 10px;
+
+  line-height: 1.6;
+}
+
+
+.bookmark-empty a {
+  display: inline-flex;
+
+  padding: 10px 15px;
+
+  border-radius: 10px;
+
+  color: #ffffff;
+
+  background: #6874db;
+
+  font-size: 9px;
+  font-weight: 600;
+}
+
+
+
+/* =====================================================
+   CONFIRM MODAL
+===================================================== */
+
+.confirm-modal {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 3000;
+
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  visibility: hidden;
+
+  opacity: 0;
+
+  background:
+    rgba(20,23,35,0.5);
+
+  backdrop-filter: blur(5px);
+
+  transition: 0.2s ease;
+}
+
+
+.confirm-modal.show {
+  visibility: visible;
+
+  opacity: 1;
+}
+
+
+.confirm-dialog {
+  width: min(400px, 100%);
+
+  padding: 26px;
+
+  border-radius: 19px;
+
+  background: #ffffff;
+
+  text-align: center;
+
+  transform: translateY(10px);
+
+  transition: 0.2s ease;
+}
+
+
+.confirm-modal.show
+.confirm-dialog {
+  transform: translateY(0);
+}
+
+
+.confirm-icon {
+  width: 50px;
+  height: 50px;
+
+  margin: 0 auto 14px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 15px;
+
+  background: #eef0ff;
+
+  font-size: 21px;
+}
+
+
+.confirm-dialog h3 {
+  margin-bottom: 7px;
+
+  font-size: 16px;
+}
+
+
+.confirm-dialog p {
+  color: #9398a6;
+
+  font-size: 9px;
+
+  line-height: 1.6;
+}
+
+
+.confirm-actions {
+  margin-top: 20px;
+
+  display: flex;
+
+  gap: 8px;
+}
+
+
+.confirm-actions button {
+  flex: 1;
+
+  min-height: 40px;
+
+  border-radius: 10px;
+
+  font-size: 9px;
+  font-weight: 600;
+}
+
+
+.cancel-button {
+  border: 1px solid #e2e5ec;
+
+  color: #747987;
+
+  background: #ffffff;
+}
+
+
+.remove-button {
+  border: none;
+
+  color: #ffffff;
+
+  background: #d76270;
+}
+
+
+
+/* =====================================================
+   TOAST
+===================================================== */
+
+.bookmark-toast {
+  position: fixed;
+
+  right: 24px;
+  bottom: 24px;
+
+  z-index: 4000;
+
+  padding: 12px 16px;
+
+  visibility: hidden;
+
+  opacity: 0;
+
+  border-radius: 11px;
+
+  color: #ffffff;
+
+  background: #272c38;
+
+  font-size: 9px;
+
+  transform: translateY(10px);
+
+  transition: 0.2s ease;
+}
+
+
+.bookmark-toast.show {
+  visibility: visible;
+
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+
+/* =====================================================
+   DARK MODE
+===================================================== */
+
+html[data-theme="dark"]
+body {
+  color: #e4e6ec;
+
+  background: #17191f;
+}
+
+
+html[data-theme="dark"]
+.sidebar,
+
+html[data-theme="dark"]
+.topbar,
+
+html[data-theme="dark"]
+.stat-card,
+
+html[data-theme="dark"]
+.saved-card,
+
+html[data-theme="dark"]
+.bookmark-card,
+
+html[data-theme="dark"]
+.confirm-dialog {
+  background: #1e2128;
+}
+
+
+html[data-theme="dark"]
+.sidebar {
+  border-right-color: #30333b;
+}
+
+
+html[data-theme="dark"]
+.topbar {
+  border-bottom-color: #30333b;
+}
+
+
+html[data-theme="dark"]
+.nav-link {
+  color: #aab0bc;
+}
+
+
+html[data-theme="dark"]
+.nav-link:hover,
+
+html[data-theme="dark"]
+.nav-link.active {
+  color: #c9cdff;
+
+  background: #292e44;
+}
+
+
+html[data-theme="dark"]
+.stat-card,
+
+html[data-theme="dark"]
+.saved-card,
+
+html[data-theme="dark"]
+.bookmark-card {
+  border-color: #30333c;
+}
+
+
+html[data-theme="dark"]
+.stat-card strong,
+
+html[data-theme="dark"]
+.saved-header h2,
+
+html[data-theme="dark"]
+.bookmark-card h3,
+
+html[data-theme="dark"]
+.bookmark-empty h3,
+
+html[data-theme="dark"]
+.confirm-dialog h3 {
+  color: #e4e6ed;
+}
+
+
+html[data-theme="dark"]
+.stat-icon,
+
+html[data-theme="dark"]
+.confirm-icon {
+  background: #292e44;
+}
+
+
+html[data-theme="dark"]
+.bookmark-search {
+  border-color: #363a44;
+
+  background: #25282f;
+}
+
+
+html[data-theme="dark"]
+.bookmark-search input {
+  color: #e2e5eb;
+}
+
+
+html[data-theme="dark"]
+.bookmark-filter {
+  color: #b0b4bf;
+
+  border-color: #393c46;
+
+  background: #25282f;
+}
+
+
+html[data-theme="dark"]
+.bookmark-filter.active {
+  color: #ffffff;
+
+  border-color: #6874db;
+
+  background: #6874db;
+}
+
+
+html[data-theme="dark"]
+.bookmark-progress-track {
+  background: #30343e;
+}
+
+
+html[data-theme="dark"]
+.remove-bookmark-button,
+
+html[data-theme="dark"]
+.cancel-button {
+  color: #b8bcc6;
+
+  border-color: #393c46;
+
+  background: #25282f;
+}
+
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1150px) {
+
+  .bookmark-grid {
+    grid-template-columns:
+      repeat(2, minmax(0,1fr));
+  }
+
+
+  .bookmark-stats {
+    grid-template-columns:
+      repeat(2, minmax(0,1fr));
+  }
+
+}
+
+
+
+@media (max-width: 900px) {
+
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+
+  .app-shell {
+    margin-left: 0;
+  }
+
+
+  .menu-button {
+    display: block;
+  }
+
+}
+
+
+
+@media (max-width: 700px) {
+
+  .topbar {
+    min-height: 74px;
+
+    padding: 12px 17px;
+  }
+
+
+  .student-profile
+  > div:last-child {
+    display: none;
+  }
+
+
+  .bookmarks-page {
+    padding:
+      20px 17px 40px;
+  }
+
+
+  .bookmarks-hero {
+    min-height: 0;
+
+    padding: 28px 24px;
+  }
+
+
+  .hero-bookmark {
+    display: none;
+  }
+
+
+  .saved-header {
+    align-items: stretch;
+
+    flex-direction: column;
+  }
+
+
+  .bookmark-search {
+    width: 100%;
+  }
+
+}
+
+
+
+@media (max-width: 560px) {
+
+  .bookmark-grid,
+
+  .bookmark-stats {
+    grid-template-columns: 1fr;
+  }
+
+
+  .saved-card {
+    padding: 18px;
+  }
+
+}

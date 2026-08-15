@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Messages | EduSpace</title>
+
+
+  <!-- GOOGLE FONT -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- SHARED SYSTEMS -->
+
+  <script src="theme.js"></script>
+
+  <script src="data.js"></script>
+
+
+  <!-- PAGE CSS -->
+
+  <link
+    rel="stylesheet"
+    href="messages.css"
+  >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     MOBILE OVERLAY
+===================================================== -->
+
+<div
+  class="mobile-overlay"
+  id="mobileOverlay"
+></div>
+
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside
+  class="sidebar"
+  id="sidebar"
+>
+
+
+  <div class="logo">
+
+    <div class="logo-icon">
+      🎓
+    </div>
+
+    <span>
+      EduSpace
+    </span>
+
+  </div>
+
+
+
+  <nav class="sidebar-nav">
+
+
+    <a
+      href="dashboard.html"
+      class="nav-link"
+    >
+
+      <span class="nav-icon">
+        ⌂
+      </span>
+
+      <span>
+        Dashboard
+      </span>
+
+    </a>
+
+
+
+    <a
+      href="dashboard.html#courses"
+      class="nav-link"
+    >
+
+      <span class="nav-icon">
+        📚
+      </span>
+
+      <span>
+        My Courses
+      </span>
+
+    </a>
+
+
+
+    <a
+      href="assignments.html"
+      class="nav-link"
+    >
+
+      <span class="nav-icon">
+        📝
+      </span>
+
+      <span>
+        Assignments
+      </span>
+
+    </a>
+
+
+
+    <a
+      href="dashboard.html#grades"
+      class="nav-link"
+    >
+
+      <span class="nav-icon">
+        📊
+      </span>
+
+      <span>
+        Grades
+      </span>
+
+    </a>
+
+
+
+    <a
+      href="schedule.html"
+      class="nav-link"
+    >
+
+      <span class="nav-icon">
+        📅
+      </span>
+
+      <span>
+        Schedule
+      </span>
+
+    </a>
+
+
+
+    <a
+      href="messages.html"
+      class="nav-link active"
+    >
+
+      <span class="nav-icon">
+        💬
+      </span>
+
+      <span>
+        Messages
+      </span>
+
+      <span
+        class="sidebar-message-count"
+        id="sidebarMessageCount"
+      ></span>
+
+    </a>
+
+
+    <a
+  href="achievements.html"
+  class="nav-link"
+>
+
+  <span class="nav-icon">
+    🏆
+  </span>
+
+  <span>
+    Achievements
+  </span>
+
+</a>
+
+
+<a
+  href="streak.html"
+  class="nav-link"
+>
+
+  <span class="nav-icon">
+    🔥
+  </span>
+
+  <span>
+    Learning Streak
+  </span>
+
+</a>
+
+
+<a
+  href="bookmarks.html"
+  class="nav-link"
+>
+
+  <span class="nav-icon">
+    🔖
+  </span>
+
+  <span>
+    Saved Lessons
+  </span>
+
+</a>
+
+
+  </nav>
+
+
+</aside>
+
+
+
+<!-- =====================================================
+     APP
+===================================================== -->
+
+<div class="app-shell">
+
+
+
+<!-- =====================================================
+     TOPBAR
+===================================================== -->
+
+<header class="topbar">
+
+
+  <div class="topbar-left">
+
+
+    <button
+      class="menu-button"
+      id="menuButton"
+      type="button"
+      aria-label="Open navigation"
+    >
+      ☰
+    </button>
+
+
+    <div>
+
+      <span class="topbar-label">
+        STUDENT PORTAL
+      </span>
+
+      <h1>
+        Messages
+      </h1>
+
+    </div>
+
+
+  </div>
+
+
+
+  <div class="topbar-right">
+
+
+    <a
+      href="dashboard.html"
+      class="dashboard-link"
+    >
+      Dashboard
+    </a>
+
+
+
+    <a
+      href="profile.html"
+      class="student-profile"
+    >
+
+      <div
+        class="top-avatar"
+        id="topAvatar"
+      >
+        ST
+      </div>
+
+
+      <div>
+
+        <strong id="topStudentName">
+          Student
+        </strong>
+
+        <span>
+          Student
+        </span>
+
+      </div>
+
+    </a>
+
+
+  </div>
+
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main class="messages-page">
+
+
+  <!-- PAGE INTRO -->
+
+  <section class="messages-hero">
+
+
+    <div>
+
+      <span class="hero-badge">
+        💬 COMMUNICATION
+      </span>
+
+      <h2>
+        Stay connected with your
+        <span>learning community.</span>
+      </h2>
+
+      <p>
+        Message your instructors, ask questions,
+        and keep course conversations organized.
+      </p>
+
+    </div>
+
+
+    <div class="hero-icon">
+      ✉️
+    </div>
+
+
+  </section>
+
+
+
+  <!-- =================================================
+       MESSAGE APPLICATION
+  ================================================== -->
+
+  <section
+    class="message-app"
+    id="messageApp"
+  >
+
+
+
+    <!-- ===============================================
+         CONVERSATION SIDEBAR
+    ================================================ -->
+
+    <aside
+      class="conversation-panel"
+      id="conversationPanel"
+    >
+
+
+      <div class="conversation-header">
+
+
+        <div>
+
+          <span>
+            INBOX
+          </span>
+
+          <h2>
+            Conversations
+          </h2>
+
+        </div>
+
+
+        <div
+          class="conversation-unread"
+          id="conversationUnreadCount"
+        >
+          0 unread
+        </div>
+
+
+      </div>
+
+
+
+      <!-- SEARCH -->
+
+      <div class="conversation-search">
+
+        <span>
+          🔍
+        </span>
+
+        <input
+          type="search"
+          id="conversationSearch"
+          placeholder="Search messages..."
+          autocomplete="off"
+        >
+
+      </div>
+
+
+
+      <!-- FILTERS -->
+
+      <div
+        class="message-filters"
+        id="messageFilters"
+      >
+
+        <button
+          class="message-filter active"
+          type="button"
+          data-message-filter="all"
+        >
+          All
+        </button>
+
+        <button
+          class="message-filter"
+          type="button"
+          data-message-filter="unread"
+        >
+          Unread
+        </button>
+
+      </div>
+
+
+
+      <!-- CONVERSATIONS -->
+
+      <div
+        class="conversation-list"
+        id="conversationList"
+      ></div>
+
+
+
+      <!-- EMPTY SEARCH -->
+
+      <div
+        class="conversation-empty"
+        id="conversationEmpty"
+      >
+
+        <span>
+          🔎
+        </span>
+
+        <strong>
+          No conversations found
+        </strong>
+
+        <p>
+          Try another search.
+        </p>
+
+      </div>
+
+
+    </aside>
+
+
+
+    <!-- ===============================================
+         CHAT PANEL
+    ================================================ -->
+
+    <section
+      class="chat-panel"
+      id="chatPanel"
+    >
+
+
+      <!-- EMPTY CHAT -->
+
+      <div
+        class="chat-empty"
+        id="chatEmpty"
+      >
+
+        <div class="chat-empty-icon">
+          💬
+        </div>
+
+        <h2>
+          Your messages
+        </h2>
+
+        <p>
+          Select a conversation to
+          view your messages.
+        </p>
+
+      </div>
+
+
+
+      <!-- ACTIVE CHAT -->
+
+      <div
+        class="active-chat"
+        id="activeChat"
+      >
+
+
+        <!-- CHAT HEADER -->
+
+        <header class="chat-header">
+
+
+          <button
+            class="chat-back-button"
+            id="chatBackButton"
+            type="button"
+            aria-label="Back to conversations"
+          >
+            ←
+          </button>
+
+
+
+          <div
+            class="chat-avatar"
+            id="chatAvatar"
+          >
+            TR
+          </div>
+
+
+
+          <div class="chat-header-info">
+
+            <strong id="chatName">
+              Instructor
+            </strong>
+
+            <span id="chatMeta">
+              Course
+            </span>
+
+          </div>
+
+
+
+          <div
+            class="chat-status"
+            id="chatStatus"
+          >
+
+            <span></span>
+
+            Available
+
+          </div>
+
+
+        </header>
+
+
+
+        <!-- MESSAGES -->
+
+        <div
+          class="chat-messages"
+          id="chatMessages"
+          aria-live="polite"
+        ></div>
+
+
+
+        <!-- ATTACHMENT PREVIEW -->
+
+        <div
+          class="attachment-preview"
+          id="attachmentPreview"
+        >
+
+          <div>
+
+            <span class="attachment-icon">
+              📎
+            </span>
+
+
+            <div>
+
+              <strong id="attachmentName">
+                File
+              </strong>
+
+              <span id="attachmentSize">
+                0 KB
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <button
+            id="removeAttachmentButton"
+            type="button"
+            aria-label="Remove attachment"
+          >
+            ×
+          </button>
+
+
+        </div>
+
+
+
+        <!-- COMPOSER -->
+
+        <form
+          class="message-composer"
+          id="messageForm"
+        >
+
+
+          <input
+            type="file"
+            id="messageFile"
+            hidden
+          >
+
+
+          <button
+            class="attach-button"
+            id="attachButton"
+            type="button"
+            aria-label="Attach file"
+            title="Attach file"
+          >
+            📎
+          </button>
+
+
+
+          <div class="composer-input-wrapper">
+
+            <textarea
+              id="messageInput"
+              rows="1"
+              maxlength="2000"
+              placeholder="Write a message..."
+              aria-label="Write a message"
+            ></textarea>
+
+          </div>
+
+
+
+          <button
+            class="send-message-button"
+            id="sendMessageButton"
+            type="submit"
+            aria-label="Send message"
+          >
+
+            <span>
+              Send
+            </span>
+
+            →
+
+          </button>
+
+
+        </form>
+
+
+        <div
+          class="composer-note"
+        >
+          Attachments are saved as file information only
+          in this front-end version.
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+  </section>
+
+
+</main>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     TOAST
+===================================================== -->
+
+<div
+  class="message-toast"
+  id="messageToast"
+></div>
+
+
+
+<!-- =====================================================
+     PAGE SCRIPT
+===================================================== -->
+
+<script src="messages.js"></script>
+<script src="avatar.js"></script>
+
+</body>
+
+</html>

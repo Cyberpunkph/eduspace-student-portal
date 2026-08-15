@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>My Profile | EduSpace</title>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="profile.css"
+  >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     SIDEBAR
+========================= -->
+
+<aside class="sidebar">
+
+
+  <div class="logo">
+
+    <div class="logo-icon">
+      🎓
+    </div>
+
+    <span>
+      EduSpace
+    </span>
+
+  </div>
+
+
+  <nav class="navigation">
+
+
+    <a
+      href="dashboard.html"
+      class="nav-item"
+    >
+
+      <span>
+        ⌂
+      </span>
+
+      Dashboard
+
+    </a>
+
+
+    <a
+      href="profile.html"
+      class="nav-item active"
+    >
+
+      <span>
+        👤
+      </span>
+
+      My Profile
+
+    </a>
+
+
+    <a
+      href="#academic"
+      class="nav-item"
+    >
+
+      <span>
+        🎓
+      </span>
+
+      Academic Info
+
+    </a>
+
+
+    <a
+      href="#account"
+      class="nav-item"
+    >
+
+      <span>
+        ⚙️
+      </span>
+
+      Account Settings
+
+    </a>
+
+
+  </nav>
+
+
+  <a
+    href="dashboard.html"
+    class="back-dashboard"
+  >
+
+    ← Back to Dashboard
+
+  </a>
+
+
+</aside>
+
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<main class="main-content">
+
+
+<header class="topbar">
+
+
+  <div>
+
+    <p>
+      STUDENT PORTAL
+    </p>
+
+    <h2>
+      My Profile
+    </h2>
+
+  </div>
+
+
+  <a
+    href="dashboard.html"
+    class="dashboard-button"
+  >
+
+    Dashboard
+
+  </a>
+
+
+</header>
+
+
+
+<div class="profile-content">
+
+
+<!-- =========================
+     PROFILE HERO
+========================= -->
+
+<section class="profile-hero">
+
+
+  <div class="profile-main-info">
+
+
+    <div
+      class="profile-avatar"
+      id="profileAvatar"
+    >
+      AJ
+    </div>
+
+
+    <div>
+
+
+      <span class="profile-badge">
+        STUDENT PROFILE
+      </span>
+
+
+      <h1 id="heroStudentName">
+        Alex Johnson
+      </h1>
+
+
+      <p id="heroProgram">
+        Computer Science Student
+      </p>
+
+
+      <span
+        class="hero-email"
+        id="heroEmail"
+      >
+        student@email.com
+      </span>
+
+
+    </div>
+
+
+  </div>
+
+
+  <button
+    class="edit-profile-button"
+    id="editProfileButton"
+  >
+
+    ✏️ Edit Profile
+
+  </button>
+
+
+</section>
+
+
+
+<!-- =========================
+     PROFILE GRID
+========================= -->
+
+<div class="profile-grid">
+
+
+<!-- LEFT -->
+
+<div class="profile-left">
+
+
+  <!-- =====================================================
+     PROFILE PHOTO
+===================================================== -->
+
+<section
+  class="profile-photo-card"
+  id="profilePhotoSection"
+>
+
+
+  <div class="profile-photo-content">
+
+
+    <!-- PHOTO -->
+
+    <div class="profile-photo-area">
+
+
+      <div
+        class="profile-photo-preview"
+        id="profilePhotoPreview"
+        data-student-avatar
+      >
+        ST
+      </div>
+
+
+      <div class="photo-status-dot"></div>
+
+
+    </div>
+
+
+
+    <!-- INFO -->
+
+    <div class="profile-photo-info">
+
+
+      <span class="profile-section-label">
+        PROFILE PHOTO
+      </span>
+
+
+      <h2>
+        Your profile picture
+      </h2>
+
+
+      <p>
+
+        Upload a photo to personalize your
+        EduSpace account. Your image will appear
+        throughout the student portal.
+
+      </p>
+
+
+      <div class="profile-photo-requirements">
+
+        JPG, PNG or WebP • Maximum 8 MB
+
+      </div>
+
+
+    </div>
+
+
+
+    <!-- ACTIONS -->
+
+    <div class="profile-photo-actions">
+
+
+      <input
+        type="file"
+        id="profilePhotoInput"
+        accept="image/jpeg,image/png,image/webp"
+        hidden
+      >
+
+
+      <button
+        class="change-photo-button"
+        id="changePhotoButton"
+        type="button"
+      >
+
+        📷 Change Photo
+
+      </button>
+
+
+      <button
+        class="remove-photo-button"
+        id="removePhotoButton"
+        type="button"
+      >
+
+        Remove
+
+      </button>
+
+
+    </div>
+
+
+  </div>
+
+
+
+  <!-- UPLOAD STATUS -->
+
+  <div
+    class="profile-photo-message"
+    id="profilePhotoMessage"
+  ></div>
+
+
+</section>
+
+
+<!-- =========================
+     PERSONAL INFORMATION
+========================= -->
+
+<section
+  class="profile-card"
+  id="personal"
+>
+
+
+  <div class="card-heading">
+
+    <div>
+
+      <span>
+        PERSONAL DETAILS
+      </span>
+
+      <h2>
+        Personal Information
+      </h2>
+
+    </div>
+
+    <span class="heading-icon">
+      👤
+    </span>
+
+  </div>
+
+
+
+  <div class="form-grid">
+
+
+    <div class="form-group">
+
+      <label for="fullName">
+        Full Name
+      </label>
+
+      <input
+        type="text"
+        id="fullName"
+        disabled
+      >
+
+    </div>
+
+
+    <div class="form-group">
+
+      <label for="email">
+        Email Address
+      </label>
+
+      <input
+        type="email"
+        id="email"
+        disabled
+      >
+
+    </div>
+
+
+    <div class="form-group">
+
+      <label for="phone">
+        Phone Number
+      </label>
+
+      <input
+        type="text"
+        id="phone"
+        placeholder="+63..."
+        disabled
+      >
+
+    </div>
+
+
+    <div class="form-group">
+
+      <label for="birthDate">
+        Birth Date
+      </label>
+
+      <input
+        type="date"
+        id="birthDate"
+        disabled
+      >
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+
+<!-- =========================
+     ACADEMIC INFORMATION
+========================= -->
+
+<section
+  class="profile-card"
+  id="academic"
+>
+
+
+  <div class="card-heading">
+
+    <div>
+
+      <span>
+        EDUCATION
+      </span>
+
+      <h2>
+        Academic Information
+      </h2>
+
+    </div>
+
+    <span class="heading-icon">
+      🎓
+    </span>
+
+  </div>
+
+
+
+  <div class="form-grid">
+
+
+    <div class="form-group">
+
+      <label for="studentId">
+        Student ID
+      </label>
+
+      <input
+        type="text"
+        id="studentId"
+        disabled
+      >
+
+    </div>
+
+
+    <div class="form-group">
+
+      <label for="program">
+        Program
+      </label>
+
+      <input
+        type="text"
+        id="program"
+        disabled
+      >
+
+    </div>
+
+
+    <div class="form-group">
+
+      <label for="yearLevel">
+        Year Level
+      </label>
+
+      <select
+        id="yearLevel"
+        disabled
+      >
+
+        <option value="Year 1">
+          Year 1
+        </option>
+
+        <option value="Year 2">
+          Year 2
+        </option>
+
+        <option value="Year 3">
+          Year 3
+        </option>
+
+        <option value="Year 4">
+          Year 4
+        </option>
+
+      </select>
+
+    </div>
+
+
+    <div class="form-group">
+
+      <label for="school">
+        School
+      </label>
+
+      <input
+        type="text"
+        id="school"
+        disabled
+      >
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+
+<!-- =========================
+     ACCOUNT SETTINGS
+========================= -->
+
+<section
+  class="profile-card"
+  id="account"
+>
+
+
+  <div class="card-heading">
+
+    <div>
+
+      <span>
+        ACCOUNT
+      </span>
+
+      <h2>
+        Account Settings
+      </h2>
+
+    </div>
+
+    <span class="heading-icon">
+      ⚙️
+    </span>
+
+  </div>
+
+
+  <div class="account-options">
+
+
+    <button
+      class="account-option"
+      type="button"
+    >
+
+      <div class="account-icon">
+        🔒
+      </div>
+
+
+      <div>
+
+        <strong>
+          Change Password
+        </strong>
+
+        <span>
+          Update your account password
+        </span>
+
+      </div>
+
+
+      <span class="option-arrow">
+        →
+      </span>
+
+    </button>
+
+
+
+    <button
+      class="account-option"
+      type="button"
+    >
+
+      <div class="account-icon">
+        🔔
+      </div>
+
+
+      <div>
+
+        <strong>
+          Notifications
+        </strong>
+
+        <span>
+          Manage notification preferences
+        </span>
+
+      </div>
+
+
+      <span class="option-arrow">
+        →
+      </span>
+
+    </button>
+
+
+
+  </div>
+
+
+</section>
+
+
+
+<!-- SAVE BUTTONS -->
+
+<div
+  class="edit-actions"
+  id="editActions"
+>
+
+
+  <button
+    class="cancel-button"
+    id="cancelButton"
+  >
+    Cancel
+  </button>
+
+
+  <button
+    class="save-button"
+    id="saveButton"
+  >
+    Save Changes
+  </button>
+
+
+</div>
+
+
+</div>
+
+
+
+<!-- =========================
+     RIGHT COLUMN
+========================= -->
+
+<div class="profile-right">
+
+
+<!-- PROFILE COMPLETION -->
+
+<section class="side-card">
+
+
+  <div class="side-heading">
+
+    <h3>
+      Profile Completion
+    </h3>
+
+    <span>
+      ✨
+    </span>
+
+  </div>
+
+
+  <div class="completion-circle">
+
+
+    <div
+      class="completion-ring"
+      id="completionRing"
+    >
+
+      <div class="completion-inner">
+
+        <strong id="completionValue">
+          0%
+        </strong>
+
+        <span>
+          Complete
+        </span>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+  <p id="completionMessage">
+
+    Complete your profile information.
+
+  </p>
+
+
+</section>
+
+
+
+<!-- ACADEMIC STATS -->
+
+<section class="side-card">
+
+
+  <div class="side-heading">
+
+    <h3>
+      Academic Summary
+    </h3>
+
+    <span>
+      📊
+    </span>
+
+  </div>
+
+
+  <div class="academic-stats">
+
+
+    <div>
+
+      <span>
+        Courses
+      </span>
+
+      <strong>
+        3
+      </strong>
+
+    </div>
+
+
+    <div>
+
+      <span>
+        Lessons Completed
+      </span>
+
+      <strong id="lessonsCompleted">
+        0
+      </strong>
+
+    </div>
+
+
+    <div>
+
+      <span>
+        Overall Progress
+      </span>
+
+      <strong id="overallProgress">
+        0%
+      </strong>
+
+    </div>
+
+
+    <div>
+
+      <span>
+        Quiz Average
+      </span>
+
+      <strong id="quizAverage">
+        0%
+      </strong>
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+
+<!-- MEMBER CARD -->
+
+<section class="student-card">
+
+
+  <span>
+    EDUSPACE STUDENT
+  </span>
+
+
+  <div
+    class="student-card-avatar"
+    id="studentCardAvatar"
+  >
+    AJ
+  </div>
+
+
+  <h3 id="studentCardName">
+    Alex Johnson
+  </h3>
+
+
+  <p id="studentCardProgram">
+    Computer Science
+  </p>
+
+
+  <div class="student-card-footer">
+
+    <span>
+      Student ID
+    </span>
+
+    <strong id="studentCardId">
+      2026-00124
+    </strong>
+
+  </div>
+
+
+</section>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</main>
+
+
+<div
+  class="save-toast"
+  id="saveToast"
+>
+  ✓ Profile updated successfully
+</div>
+
+
+<script src="profile.js"></script>
+<script src="avatar.js"></script>
+
+
+</body>
+
+</html>

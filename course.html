@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Course | EduSpace</title>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- ===============================================
+       SHARED SYSTEMS
+  ================================================ -->
+
+  <script src="theme.js"></script>
+
+  <script src="data.js"></script>
+
+
+  <!-- COURSE CSS -->
+
+  <link
+    rel="stylesheet"
+    href="course.css"
+  >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     MOBILE OVERLAY
+===================================================== -->
+
+<div
+  class="overlay"
+  id="overlay"
+></div>
+
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside
+  class="sidebar"
+  id="sidebar"
+>
+
+
+  <!-- LOGO -->
+
+  <div class="logo">
+
+    <div class="logo-icon">
+      🎓
+    </div>
+
+    <span>
+      EduSpace
+    </span>
+
+  </div>
+
+
+
+  <!-- BACK -->
+
+  <a
+    href="dashboard.html"
+    class="back-dashboard"
+  >
+    ← Dashboard
+  </a>
+
+
+
+  <!-- COURSE NAME -->
+
+  <div class="course-sidebar-title">
+
+    <span>
+      COURSE CONTENT
+    </span>
+
+    <h3 id="sidebarCourseName">
+      Course
+    </h3>
+
+  </div>
+
+
+
+  <!-- LESSONS -->
+
+  <div
+    class="lesson-navigation"
+    id="lessonNavigation"
+  >
+
+    <!-- Created by course.js -->
+
+  </div>
+
+
+
+  <!-- COURSE PROGRESS -->
+
+  <div class="sidebar-progress">
+
+
+    <div class="sidebar-progress-title">
+
+      <span>
+        Course progress
+      </span>
+
+      <strong id="sidebarProgressText">
+        0%
+      </strong>
+
+    </div>
+
+
+    <div class="sidebar-progress-bar">
+
+      <div
+        class="sidebar-progress-fill"
+        id="sidebarProgressFill"
+      ></div>
+
+    </div>
+
+
+  </div>
+
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main class="main-content">
+
+
+
+<!-- =====================================================
+     TOPBAR
+===================================================== -->
+
+<header class="topbar">
+
+
+  <div class="topbar-left">
+
+
+    <button
+      class="menu-button"
+      id="menuButton"
+      type="button"
+      aria-label="Open course menu"
+    >
+      ☰
+    </button>
+
+
+    <div>
+
+      <p>
+        LEARNING SPACE
+      </p>
+
+      <h2 id="topbarCourseName">
+        Course
+      </h2>
+
+    </div>
+
+
+  </div>
+
+
+
+  <div class="student-profile">
+
+
+    <div
+      class="student-avatar"
+      id="studentAvatar"
+    >
+      ST
+    </div>
+
+
+    <div>
+
+      <strong id="studentName">
+        Student
+      </strong>
+
+      <span>
+        Student
+      </span>
+
+    </div>
+
+
+  </div>
+
+
+</header>
+
+
+
+<!-- =====================================================
+     COURSE PAGE
+===================================================== -->
+
+<div class="course-page">
+
+
+
+<!-- =====================================================
+     BREADCRUMB
+===================================================== -->
+
+<div class="breadcrumb">
+
+  <a href="dashboard.html">
+    Dashboard
+  </a>
+
+  <span>
+    ›
+  </span>
+
+  <span id="breadcrumbCourse">
+    Course
+  </span>
+
+</div>
+
+
+
+<!-- =====================================================
+     COURSE HERO
+===================================================== -->
+
+<section class="course-hero">
+
+
+  <div class="course-hero-copy">
+
+
+    <span
+      class="course-tag"
+      id="courseCategory"
+    >
+      COURSE
+    </span>
+
+
+    <h1 id="courseTitle">
+      Course
+    </h1>
+
+
+    <p id="courseDescription">
+      Course information will appear here.
+    </p>
+
+
+
+    <div class="course-information">
+
+
+      <span>
+
+        📚
+
+        <strong id="lessonCount">
+          0
+        </strong>
+
+        lessons
+
+      </span>
+
+
+      <span>
+
+        ⏱
+
+        <strong id="courseDuration">
+          0 hours
+        </strong>
+
+      </span>
+
+
+      <span>
+        ⭐ Beginner Friendly
+      </span>
+
+
+    </div>
+
+
+  </div>
+
+
+
+  <!-- HERO PROGRESS -->
+
+  <div class="hero-progress">
+
+
+    <div
+      class="hero-progress-circle"
+      id="heroProgressCircle"
+    >
+
+
+      <div class="hero-progress-inner">
+
+        <strong id="heroProgressText">
+          0%
+        </strong>
+
+        <span>
+          completed
+        </span>
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     LEARNING GRID
+===================================================== -->
+
+<div class="learning-grid">
+
+
+
+<!-- =====================================================
+     LEFT COLUMN
+===================================================== -->
+
+<div class="learning-main">
+
+
+
+<!-- =====================================================
+     VIDEO PLAYER
+===================================================== -->
+
+<section class="video-section">
+
+
+
+  <!-- VIDEO HEADER -->
+
+  <div class="video-header">
+
+
+    <div>
+
+
+      <span class="lesson-label">
+        CURRENT LESSON
+      </span>
+
+
+      <h2 id="currentLessonTitle">
+        Lesson
+      </h2>
+
+
+      <span
+        class="lesson-position"
+        id="lessonPositionText"
+      >
+        Lesson 1 of 1
+      </span>
+
+
+    </div>
+
+
+
+    <span
+      class="lesson-duration"
+      id="currentLessonDuration"
+    >
+      0 min
+    </span>
+
+
+  </div>
+
+
+
+  <!-- =================================================
+       VIDEO
+  ================================================== -->
+
+  <div class="video-container">
+
+
+    <video
+      id="lessonVideo"
+      controls
+      preload="metadata"
+      playsinline
+    >
+
+      Your browser does not support HTML video.
+
+    </video>
+
+
+
+    <!-- VIDEO MISSING / LOADING -->
+
+    <div
+      class="video-placeholder"
+      id="videoPlaceholder"
+    >
+
+
+      <div class="play-circle">
+        ▶
+      </div>
+
+
+      <h3 id="placeholderTitle">
+        Lesson
+      </h3>
+
+
+      <p>
+        Add the matching MP4 file inside your videos folder.
+      </p>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         RESUME VIDEO
+    ================================================== -->
+
+    <div
+      class="resume-banner"
+      id="resumeBanner"
+    >
+
+
+      <div>
+
+
+        <span class="resume-icon">
+          ↻
+        </span>
+
+
+        <div>
+
+          <strong id="resumeText">
+            Resume lesson
+          </strong>
+
+          <span>
+            Your video position was saved.
+          </span>
+
+        </div>
+
+
+      </div>
+
+
+
+      <div class="resume-actions">
+
+
+        <button
+          id="restartVideoButton"
+          type="button"
+        >
+          Start over
+        </button>
+
+
+        <button
+          class="resume-primary"
+          id="resumePlayButton"
+          type="button"
+        >
+          Resume ▶
+        </button>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+
+  <!-- =================================================
+       PLAYER TOOLBAR
+  ================================================== -->
+
+  <div class="player-toolbar">
+
+
+
+    <div class="player-toolbar-left">
+
+
+
+      <!-- REWIND -->
+
+      <button
+        class="player-tool-button"
+        id="rewindButton"
+        type="button"
+        title="Back 10 seconds"
+      >
+        ↶ 10s
+      </button>
+
+
+
+      <!-- FORWARD -->
+
+      <button
+        class="player-tool-button"
+        id="forwardButton"
+        type="button"
+        title="Forward 10 seconds"
+      >
+        10s ↷
+      </button>
+
+
+
+      <!-- SPEED -->
+
+      <label class="speed-control">
+
+
+        <span>
+          Speed
+        </span>
+
+
+        <select id="playbackSpeed">
+
+
+          <option value="0.75">
+            0.75×
+          </option>
+
+
+          <option
+            value="1"
+            selected
+          >
+            1×
+          </option>
+
+
+          <option value="1.25">
+            1.25×
+          </option>
+
+
+          <option value="1.5">
+            1.5×
+          </option>
+
+
+          <option value="2">
+            2×
+          </option>
+
+
+        </select>
+
+
+      </label>
+
+
+    </div>
+
+
+
+    <!-- VIDEO TIME -->
+
+    <div class="player-time">
+
+      <span id="videoTimeText">
+        0:00 / 0:00
+      </span>
+
+    </div>
+
+
+  </div>
+
+
+
+  <!-- =================================================
+       WATCH PROGRESS
+  ================================================== -->
+
+  <div class="watch-progress">
+
+
+    <div class="watch-progress-heading">
+
+      <span>
+        Video progress
+      </span>
+
+      <strong id="videoWatchText">
+        0% watched
+      </strong>
+
+    </div>
+
+
+
+    <div class="watch-progress-track">
+
+      <div
+        class="watch-progress-fill"
+        id="videoWatchFill"
+      ></div>
+
+    </div>
+
+
+  </div>
+
+
+
+  <!-- =================================================
+       KEYBOARD SHORTCUTS
+  ================================================== -->
+
+  <div class="keyboard-help">
+
+
+    <span>
+      Keyboard:
+    </span>
+
+
+    <kbd>
+      Space
+    </kbd>
+
+    <small>
+      Play/Pause
+    </small>
+
+
+    <kbd>
+      ←
+    </kbd>
+
+    <kbd>
+      →
+    </kbd>
+
+    <small>
+      Seek 10s
+    </small>
+
+
+    <kbd>
+      M
+    </kbd>
+
+    <small>
+      Mute
+    </small>
+
+
+    <kbd>
+      F
+    </kbd>
+
+    <small>
+      Fullscreen
+    </small>
+
+
+  </div>
+
+
+
+  <!-- =================================================
+       LESSON ACTIONS
+  ================================================== -->
+
+  <div class="lesson-actions">
+
+
+    <button
+      class="secondary-button"
+      id="previousLessonButton"
+      type="button"
+    >
+      ← Previous
+    </button>
+
+
+
+    <button
+      class="complete-button"
+      id="completeLessonButton"
+      type="button"
+    >
+      ✓ Mark as complete
+    </button>
+
+
+
+    <button
+      class="secondary-button"
+      id="nextLessonButton"
+      type="button"
+    >
+      Next →
+    </button>
+
+
+  </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT LESSON
+===================================================== -->
+
+<section class="content-card">
+
+
+  <div class="section-heading">
+
+
+    <div>
+
+      <span>
+        LESSON OVERVIEW
+      </span>
+
+      <h2>
+        About this lesson
+      </h2>
+
+    </div>
+
+
+  </div>
+
+
+
+  <p
+    class="lesson-description"
+    id="lessonDescription"
+  >
+    Lesson information will appear here.
+  </p>
+
+
+
+  <div
+    class="learning-objectives"
+    id="learningObjectives"
+  ></div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     NOTES
+===================================================== -->
+
+<section class="content-card">
+
+
+  <div class="section-heading">
+
+
+    <div>
+
+      <span>
+        PERSONAL NOTES
+      </span>
+
+      <h2>
+        My Notes
+      </h2>
+
+    </div>
+
+
+
+    <span
+      class="saved-label"
+      id="savedLabel"
+    >
+      Saved ✓
+    </span>
+
+
+  </div>
+
+
+
+  <textarea
+    id="studentNotes"
+    placeholder="Write your notes for this lesson..."
+  ></textarea>
+
+
+
+  <div class="notes-footer">
+
+
+    <span>
+      Tip: Ctrl + S also saves your notes.
+    </span>
+
+
+    <button
+      class="save-notes-button"
+      id="saveNotesButton"
+      type="button"
+    >
+      Save notes
+    </button>
+
+
+  </div>
+
+
+</section>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     RIGHT COLUMN
+===================================================== -->
+
+<aside class="learning-side">
+
+
+
+<!-- =====================================================
+     COURSE PROGRESS
+===================================================== -->
+
+<section class="side-card">
+
+
+  <div class="side-heading">
+
+
+    <h3>
+      Your Progress
+    </h3>
+
+
+    <span>
+      📈
+    </span>
+
+
+  </div>
+
+
+
+  <div class="progress-summary">
+
+
+    <strong id="completedLessonCount">
+      0
+    </strong>
+
+
+    <span>
+      lessons completed
+    </span>
+
+
+
+    <div class="large-progress-bar">
+
+      <div
+        class="large-progress-fill"
+        id="largeProgressFill"
+      ></div>
+
+    </div>
+
+
+
+    <p id="progressMotivation">
+      Start your first lesson.
+    </p>
+
+
+  </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     MATERIALS
+===================================================== -->
+
+<section class="side-card">
+
+
+  <div class="side-heading">
+
+    <h3>
+      Lesson Materials
+    </h3>
+
+    <span>
+      📎
+    </span>
+
+  </div>
+
+
+  <div
+    class="material-list"
+    id="materialList"
+  ></div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     QUIZ
+===================================================== -->
+
+<section class="quiz-card">
+
+
+  <div class="quiz-icon">
+    🧠
+  </div>
+
+
+  <div>
+
+
+    <span>
+      TEST YOUR KNOWLEDGE
+    </span>
+
+
+    <h3>
+      Lesson Quiz
+    </h3>
+
+
+    <p>
+      Complete a short quiz after studying this lesson.
+    </p>
+
+
+    <strong
+      class="existing-quiz-score"
+      id="existingQuizScore"
+    >
+      Not attempted
+    </strong>
+
+
+  </div>
+
+
+
+  <button
+    id="startQuizButton"
+    type="button"
+  >
+    Start Quiz →
+  </button>
+
+
+</section>
+
+
+</aside>
+
+
+</div>
+
+
+</div>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     QUIZ MODAL
+===================================================== -->
+
+<div
+  class="quiz-modal"
+  id="quizModal"
+>
+
+
+  <div class="quiz-modal-content">
+
+
+
+    <div class="quiz-modal-header">
+
+
+      <div>
+
+        <span>
+          QUICK QUIZ
+        </span>
+
+        <h2 id="quizTitle">
+          Lesson Quiz
+        </h2>
+
+      </div>
+
+
+
+      <button
+        id="closeQuizButton"
+        type="button"
+        aria-label="Close quiz"
+      >
+        ×
+      </button>
+
+
+    </div>
+
+
+
+    <div
+      class="quiz-content"
+      id="quizContent"
+    ></div>
+
+
+
+    <div
+      class="quiz-result"
+      id="quizResult"
+    ></div>
+
+
+
+    <button
+      class="submit-quiz-button"
+      id="submitQuizButton"
+      type="button"
+    >
+      Submit Quiz
+    </button>
+
+
+  </div>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     TOAST
+===================================================== -->
+
+<div
+  class="course-toast"
+  id="courseToast"
+></div>
+
+
+
+<!-- =====================================================
+     COURSE JAVASCRIPT
+===================================================== -->
+
+<script src="streak.js"></script>
+<script src="course.js"></script>
+<script src="avatar.js"></script>
+
+
+</body>
+
+</html>

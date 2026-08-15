@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Student Login</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Background Decoration -->
+  <div class="background">
+    <div class="blob blob-one"></div>
+    <div class="blob blob-two"></div>
+    <div class="blob blob-three"></div>
+  </div>
+
+  <main class="login-container">
+
+    <div class="login-card">
+
+      <!-- LEFT SIDE -->
+      <section class="welcome-section">
+
+        <div class="brand">
+          <div class="brand-icon">
+            🎓
+          </div>
+
+          <span>EduSpace</span>
+        </div>
+
+        <div class="welcome-content">
+
+          <span class="tag">
+            STUDENT PORTAL
+          </span>
+
+          <h1>
+            Welcome back,
+            <span>student.</span>
+          </h1>
+
+          <p>
+            Sign in to continue learning, track your progress,
+            and access your classes.
+          </p>
+
+          <div class="features">
+
+            <div class="feature">
+              <div class="feature-icon">✓</div>
+
+              <div>
+                <h3>Learn anywhere</h3>
+                <p>Access your lessons anytime.</p>
+              </div>
+            </div>
+
+            <div class="feature">
+              <div class="feature-icon">✓</div>
+
+              <div>
+                <h3>Track progress</h3>
+                <p>Stay on top of your learning goals.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <p class="welcome-footer">
+          Learn • Grow • Achieve
+        </p>
+
+      </section>
+
+
+      <!-- RIGHT SIDE -->
+      <section class="form-section">
+
+        <div class="form-wrapper">
+
+          <div class="form-header">
+            <div class="mobile-logo">🎓</div>
+
+            <h2>Sign in</h2>
+
+            <p>
+              Enter your student account details.
+            </p>
+          </div>
+
+
+          <form id="loginForm">
+
+            <!-- EMAIL -->
+            <div class="input-group">
+
+              <label for="email">
+                Student Email
+              </label>
+
+              <div class="input-box">
+
+                <span class="input-icon">
+                  ✉
+                </span>
+
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="student@email.com"
+                  autocomplete="email"
+                  required
+                />
+
+              </div>
+
+              <small class="error-message" id="emailError"></small>
+
+            </div>
+
+
+            <!-- PASSWORD -->
+            <div class="input-group">
+
+              <div class="label-row">
+
+                <label for="password">
+                  Password
+                </label>
+
+                <a href="#" class="forgot-password">
+                  Forgot password?
+                </a>
+
+              </div>
+
+              <div class="input-box">
+
+                <span class="input-icon">
+                  🔒
+                </span>
+
+                <input
+                  type="password"
+                  id="password"
+                  placeholder="Enter your password"
+                  autocomplete="current-password"
+                  required
+                />
+
+                <button
+                  type="button"
+                  id="togglePassword"
+                  class="password-toggle"
+                  aria-label="Show password"
+                >
+                  👁
+                </button>
+
+              </div>
+
+              <small
+                class="error-message"
+                id="passwordError"
+              ></small>
+
+            </div>
+
+
+            <!-- REMEMBER -->
+            <div class="remember-row">
+
+              <label class="checkbox-container">
+
+                <input type="checkbox" />
+
+                <span class="checkmark"></span>
+
+                Remember me
+
+              </label>
+
+            </div>
+
+
+            <!-- LOGIN BUTTON -->
+            <button
+              type="submit"
+              class="login-button"
+              id="loginButton"
+            >
+
+              <span class="button-text">
+                Sign in
+              </span>
+
+              <span class="button-arrow">
+                →
+              </span>
+
+              <span class="loader"></span>
+
+            </button>
+
+
+            <div
+              class="success-message"
+              id="successMessage"
+            >
+              ✓ Login successful!
+            </div>
+
+          </form>
+
+
+          <p class="signup-text">
+
+            New student?
+
+            <a href="#">
+              Create an account
+            </a>
+
+          </p>
+
+        </div>
+
+        <p class="copyright">
+          © 2026 EduSpace
+        </p>
+
+      </section>
+
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

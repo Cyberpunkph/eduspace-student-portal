@@ -1,0 +1,1849 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Student Dashboard | EduSpace</title>
+
+
+  <!-- =================================================
+       GOOGLE FONT
+  ================================================== -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- =================================================
+       SHARED SYSTEMS
+
+       IMPORTANT ORDER:
+       1. theme.js
+       2. data.js
+       3. dashboard.css
+  ================================================== -->
+
+  <script src="theme.js"></script>
+
+  <script src="data.js"></script>
+
+
+  <!-- DASHBOARD CSS -->
+
+  <link
+    rel="stylesheet"
+    href="dashboard.css"
+  >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     MOBILE SIDEBAR OVERLAY
+===================================================== -->
+
+<div
+  class="mobile-overlay"
+  id="mobileOverlay"
+></div>
+
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside
+  class="sidebar"
+  id="sidebar"
+>
+
+
+  <!-- =================================================
+       LOGO
+  ================================================== -->
+
+  <div class="logo">
+
+    <div class="logo-icon">
+      🎓
+    </div>
+
+    <span>
+      EduSpace
+    </span>
+
+  </div>
+
+
+
+  <!-- =================================================
+       NAVIGATION
+  ================================================== -->
+
+  <nav class="sidebar-nav">
+
+
+    <!-- DASHBOARD -->
+
+    <a
+      href="#dashboard"
+      class="nav-link active"
+    >
+
+      <span class="nav-icon">
+        ⌂
+      </span>
+
+      <span>
+        Dashboard
+      </span>
+
+    </a>
+
+
+
+    <!-- COURSES -->
+
+    <a
+      href="courses.html"
+      class="nav-link"
+    >
+
+      <span class="nav-icon">
+        📚
+      </span>
+
+      <span>
+        My Courses
+      </span>
+
+    </a>
+
+
+
+    <!-- ASSIGNMENTS -->
+
+    <a
+      href="assignments.html"
+      class="nav-link"
+    >
+
+      <span class="nav-icon">
+        📝
+      </span>
+
+      <span>
+        Assignments
+      </span>
+
+    </a>
+
+
+
+    <!-- GRADES -->
+
+    <a
+      href="#grades"
+      class="nav-link"
+    >
+
+      <span class="nav-icon">
+        📊
+      </span>
+
+      <span>
+        Grades
+      </span>
+
+    </a>
+
+
+
+    <!-- SCHEDULE -->
+
+    <a
+      href="schedule.html"
+      class="nav-link"
+    >
+
+      <span class="nav-icon">
+        📅
+      </span>
+
+      <span>
+        Schedule
+      </span>
+
+    </a>
+
+
+
+    <!-- MESSAGES -->
+
+    <a
+    href="messages.html"
+    class="nav-link"
+  >
+
+    <span class="nav-icon">
+    💬
+    </span>
+
+    <span>
+    Messages
+    </span>
+
+    <span
+    class="sidebar-message-count"
+    id="dashboardMessageCount"
+    ></span>
+
+  </a>
+
+    <!-- ACHIEVEMENTS -->
+
+    <a
+      href="achievements.html"
+      class="nav-link"
+    >
+
+      <span class="nav-icon">
+        🏆
+      </span>
+
+      <span>
+        Achievements
+      </span>
+
+    </a>
+
+    <!-- LEARNING STREAK -->
+     
+    <a
+  href="streak.html"
+  class="nav-link"
+>
+
+  <span class="nav-icon">
+    🔥
+  </span>
+
+  <span>
+    Learning Streak
+  </span>
+
+</a>
+
+
+<a
+  href="bookmarks.html"
+  class="nav-link"
+>
+
+  <span class="nav-icon">
+    🔖
+  </span>
+
+  <span>
+    Saved Lessons
+  </span>
+
+</a>
+
+  
+</aside>
+
+
+
+<!-- =====================================================
+     APP SHELL
+===================================================== -->
+
+<div class="app-shell">
+
+
+
+<!-- =====================================================
+     TOPBAR
+===================================================== -->
+
+<header class="topbar">
+
+
+  <!-- =================================================
+       TOPBAR LEFT
+  ================================================== -->
+
+  <div class="topbar-left">
+
+
+    <!-- MOBILE MENU -->
+
+    <button
+      class="menu-button"
+      id="menuButton"
+      type="button"
+      aria-label="Open menu"
+    >
+      ☰
+    </button>
+
+
+    <div>
+
+      <span class="topbar-label">
+        STUDENT PORTAL
+      </span>
+
+      <h1>
+        Dashboard
+      </h1>
+
+    </div>
+
+
+  </div>
+
+
+
+  <!-- =================================================
+       TOPBAR RIGHT
+  ================================================== -->
+
+  <div class="topbar-right">
+
+
+
+    <!-- =================================================
+         COURSE SEARCH
+    ================================================== -->
+
+    <div class="search-box">
+
+      <span>
+        🔍
+      </span>
+
+      <input
+        type="search"
+        id="searchInput"
+        placeholder="Search courses..."
+        autocomplete="off"
+      >
+
+    </div>
+
+
+
+    <!-- =================================================
+         NOTIFICATION CENTER
+    ================================================== -->
+
+    <div
+      class="notification-menu"
+      id="notificationMenu"
+    >
+
+
+      <!-- BELL -->
+
+      <button
+        class="notification-button"
+        id="notificationButton"
+        type="button"
+        aria-label="Notifications"
+        aria-expanded="false"
+      >
+
+        🔔
+
+        <span
+          class="notification-badge"
+          id="notificationBadge"
+        >
+          0
+        </span>
+
+      </button>
+
+
+
+      <!-- NOTIFICATION DROPDOWN -->
+
+      <div
+        class="notification-dropdown"
+        id="notificationDropdown"
+      >
+
+
+        <!-- HEADER -->
+
+        <div class="notification-header">
+
+
+          <div>
+
+            <span>
+              STUDENT UPDATES
+            </span>
+
+            <h3>
+              Notifications
+            </h3>
+
+          </div>
+
+
+          <button
+            id="markAllReadButton"
+            type="button"
+          >
+            Mark all read
+          </button>
+
+
+        </div>
+
+
+
+        <!-- NOTIFICATION LIST -->
+
+        <div
+          class="notification-list"
+          id="notificationList"
+        >
+
+          <!-- JavaScript generates notifications -->
+
+        </div>
+
+
+
+        <!-- FOOTER -->
+
+        <div
+          class="notification-footer"
+          id="notificationFooter"
+        >
+
+          <button
+            id="viewAllNotificationsButton"
+            type="button"
+          >
+            View all notifications
+          </button>
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         PROFILE MENU
+    ================================================== -->
+
+    <div
+      class="profile-menu"
+      id="profileMenu"
+    >
+
+
+      <!-- PROFILE BUTTON -->
+
+      <button
+        class="profile-trigger"
+        id="profileButton"
+        type="button"
+        aria-expanded="false"
+      >
+
+
+        <div
+          class="avatar"
+          id="topAvatar"
+        >
+          ST
+        </div>
+
+
+        <div class="profile-trigger-info">
+
+          <strong id="studentName">
+            Student
+          </strong>
+
+          <span>
+            Student
+          </span>
+
+        </div>
+
+
+        <span class="profile-chevron">
+          ▾
+        </span>
+
+
+      </button>
+
+
+
+      <!-- =================================================
+           PROFILE DROPDOWN
+      ================================================== -->
+
+      <div
+        class="profile-dropdown"
+        id="profileDropdown"
+      >
+
+
+        <!-- USER -->
+
+        <div class="dropdown-user">
+
+
+          <div
+            class="dropdown-avatar"
+            id="dropdownAvatar"
+          >
+            ST
+          </div>
+
+
+          <div>
+
+            <strong id="dropdownStudentName">
+              Student
+            </strong>
+
+            <span id="dropdownStudentEmail">
+              student@email.com
+            </span>
+
+          </div>
+
+
+        </div>
+
+
+
+        <div class="dropdown-divider"></div>
+
+
+
+        <!-- MY PROFILE -->
+
+        <a
+          href="profile.html"
+          class="dropdown-item"
+        >
+
+          <span>
+            👤
+          </span>
+
+          My Profile
+
+        </a>
+
+
+
+        <!-- ACADEMIC INFORMATION -->
+
+        <a
+          href="profile.html#academic"
+          class="dropdown-item"
+        >
+
+          <span>
+            🎓
+          </span>
+
+          Academic Information
+
+        </a>
+
+
+
+        <!-- ACCOUNT SETTINGS -->
+
+        <a
+          href="profile.html#account"
+          class="dropdown-item"
+        >
+
+          <span>
+            ⚙️
+          </span>
+
+          Account Settings
+
+        </a>
+
+
+
+        <!-- APPEARANCE -->
+
+        <button
+          class="dropdown-item"
+          id="appearanceButton"
+          type="button"
+        >
+
+          <span>
+            🎨
+          </span>
+
+          Appearance
+
+        </button>
+
+
+
+        <!-- HELP -->
+
+        <button
+          class="dropdown-item"
+          id="helpButton"
+          type="button"
+        >
+
+          <span>
+            ❓
+          </span>
+
+          Help & Support
+
+        </button>
+
+
+
+        <div class="dropdown-divider"></div>
+
+
+
+        <!-- LOGOUT -->
+
+        <button
+          class="dropdown-item dropdown-logout"
+          id="logoutButton"
+          type="button"
+        >
+
+          <span>
+            ↪
+          </span>
+
+          Logout
+
+        </button>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+</header>
+
+
+
+<!-- =====================================================
+     DASHBOARD MAIN CONTENT
+===================================================== -->
+
+<main
+  class="dashboard-content"
+  id="dashboard"
+>
+
+
+
+<!-- =====================================================
+     WELCOME BANNER
+===================================================== -->
+
+<section class="welcome-banner">
+
+
+  <div class="welcome-content">
+
+
+    <span class="welcome-badge">
+      👋 Welcome back
+    </span>
+
+
+    <h2>
+
+      Ready to continue
+
+      <span>
+        learning?
+      </span>
+
+    </h2>
+
+
+    <p>
+      Keep building your skills and continue making
+      progress through your courses.
+    </p>
+
+
+    <button
+      class="continue-learning"
+      id="continueLearningButton"
+      type="button"
+    >
+
+      Continue learning
+
+      <span>
+        →
+      </span>
+
+    </button>
+
+
+  </div>
+
+
+
+  <div class="welcome-graphic">
+
+    <div class="welcome-circle">
+      📚
+    </div>
+
+  </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     DASHBOARD STATISTICS
+===================================================== -->
+
+<section class="stats-grid">
+
+
+
+  <!-- ACTIVE COURSES -->
+
+  <article class="stat-card">
+
+
+    <div class="stat-icon stat-purple">
+      📖
+    </div>
+
+
+    <div class="stat-details">
+
+      <span class="stat-label">
+        Active Courses
+      </span>
+
+      <strong id="activeCoursesStat">
+        3
+      </strong>
+
+      <small>
+        Current courses
+      </small>
+
+    </div>
+
+
+  </article>
+
+
+
+  <!-- COMPLETED LESSONS -->
+
+  <article class="stat-card">
+
+
+    <div class="stat-icon stat-blue">
+      ✅
+    </div>
+
+
+    <div class="stat-details">
+
+      <span class="stat-label">
+        Completed
+      </span>
+
+      <strong id="completedLessonsStat">
+        0
+      </strong>
+
+      <small>
+        Lessons
+      </small>
+
+    </div>
+
+
+  </article>
+
+
+
+  <!-- QUIZ GRADE -->
+
+  <article class="stat-card">
+
+
+    <div class="stat-icon stat-orange">
+      ⭐
+    </div>
+
+
+    <div class="stat-details">
+
+      <span class="stat-label">
+        Average Quiz Grade
+      </span>
+
+      <strong id="averageGradeStat">
+        0%
+      </strong>
+
+      <small id="averageGradeMessage">
+        No quizzes yet
+      </small>
+
+    </div>
+
+
+  </article>
+
+
+
+  <!-- OVERALL PROGRESS -->
+
+  <article class="stat-card">
+
+
+    <div class="stat-icon stat-green">
+      📈
+    </div>
+
+
+    <div class="stat-details">
+
+      <span class="stat-label">
+        Overall Progress
+      </span>
+
+      <strong id="overallProgressStat">
+        0%
+      </strong>
+
+      <small>
+        Across all courses
+      </small>
+
+    </div>
+
+
+  </article>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     DASHBOARD GRID
+===================================================== -->
+
+<div class="dashboard-grid">
+
+
+
+<!-- =====================================================
+     MAIN COLUMN
+===================================================== -->
+
+<div class="dashboard-main-column">
+
+
+
+<!-- =====================================================
+     COURSES
+===================================================== -->
+
+<section
+  class="dashboard-card"
+  id="courses"
+>
+
+
+  <div class="section-header">
+
+
+    <div>
+
+      <h2>
+        My Courses
+      </h2>
+
+      <p>
+        Continue where you left off
+      </p>
+
+    </div>
+
+
+    <a href="#courses">
+      View all
+    </a>
+
+
+  </div>
+
+
+
+  <div class="courses-grid">
+
+
+
+    <!-- =================================================
+         WEB DEVELOPMENT
+    ================================================== -->
+
+    <article
+      class="course-card"
+      data-course-id="web-development"
+      data-course="web development html css javascript"
+    >
+
+
+      <div class="course-cover cover-purple">
+
+
+        <span class="course-tag">
+          DEVELOPMENT
+        </span>
+
+
+        <span class="course-icon">
+          💻
+        </span>
+
+
+      </div>
+
+
+
+      <div class="course-body">
+
+
+        <h3>
+          Web Development
+        </h3>
+
+
+        <p>
+          HTML, CSS & JavaScript
+        </p>
+
+
+
+        <div class="course-progress-heading">
+
+          <span>
+            Progress
+          </span>
+
+          <strong class="course-progress-value">
+            0%
+          </strong>
+
+        </div>
+
+
+
+        <div class="progress-track">
+
+          <div class="progress-fill"></div>
+
+        </div>
+
+
+
+        <div class="course-footer">
+
+
+          <span class="course-lesson-count">
+            0/4 lessons
+          </span>
+
+
+          <button
+            class="course-button"
+            type="button"
+          >
+            Continue →
+          </button>
+
+
+        </div>
+
+
+      </div>
+
+
+    </article>
+
+
+
+    <!-- =================================================
+         MATHEMATICS
+    ================================================== -->
+
+    <article
+      class="course-card"
+      data-course-id="mathematics"
+      data-course="mathematics algebra calculus"
+    >
+
+
+      <div class="course-cover cover-blue">
+
+
+        <span class="course-tag">
+          MATHEMATICS
+        </span>
+
+
+        <span class="course-icon">
+          📐
+        </span>
+
+
+      </div>
+
+
+
+      <div class="course-body">
+
+
+        <h3>
+          Mathematics
+        </h3>
+
+
+        <p>
+          Algebra & Calculus
+        </p>
+
+
+
+        <div class="course-progress-heading">
+
+          <span>
+            Progress
+          </span>
+
+          <strong class="course-progress-value">
+            0%
+          </strong>
+
+        </div>
+
+
+
+        <div class="progress-track">
+
+          <div class="progress-fill"></div>
+
+        </div>
+
+
+
+        <div class="course-footer">
+
+
+          <span class="course-lesson-count">
+            0/3 lessons
+          </span>
+
+
+          <button
+            class="course-button"
+            type="button"
+          >
+            Continue →
+          </button>
+
+
+        </div>
+
+
+      </div>
+
+
+    </article>
+
+
+
+    <!-- =================================================
+         UI / UX
+    ================================================== -->
+
+    <article
+      class="course-card"
+      data-course-id="ui-ux"
+      data-course="ui ux design interface user experience"
+    >
+
+
+      <div class="course-cover cover-orange">
+
+
+        <span class="course-tag">
+          DESIGN
+        </span>
+
+
+        <span class="course-icon">
+          🎨
+        </span>
+
+
+      </div>
+
+
+
+      <div class="course-body">
+
+
+        <h3>
+          UI/UX Design
+        </h3>
+
+
+        <p>
+          User Interface Design
+        </p>
+
+
+
+        <div class="course-progress-heading">
+
+          <span>
+            Progress
+          </span>
+
+          <strong class="course-progress-value">
+            0%
+          </strong>
+
+        </div>
+
+
+
+        <div class="progress-track">
+
+          <div class="progress-fill"></div>
+
+        </div>
+
+
+
+        <div class="course-footer">
+
+
+          <span class="course-lesson-count">
+            0/3 lessons
+          </span>
+
+
+          <button
+            class="course-button"
+            type="button"
+          >
+            Continue →
+          </button>
+
+
+        </div>
+
+
+      </div>
+
+
+    </article>
+
+
+  </div>
+
+
+
+  <!-- SEARCH EMPTY STATE -->
+
+  <div
+    class="no-results"
+    id="noResults"
+  >
+    No courses found.
+  </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     ASSIGNMENTS
+
+     IMPORTANT:
+     Assignments are no longer hard-coded here.
+
+     dashboard.js will read assignment data from data.js
+     and insert the assignments inside:
+     #dashboardAssignmentList
+===================================================== -->
+
+<section
+  class="dashboard-card"
+  id="assignments"
+>
+
+
+  <div class="section-header">
+
+
+    <div>
+
+      <h2>
+        Upcoming Assignments
+      </h2>
+
+      <p>
+        Don't miss your deadlines
+      </p>
+
+    </div>
+
+
+    <a href="assignments.html">
+      View all
+    </a>
+
+
+  </div>
+
+
+
+  <!-- GENERATED FROM data.js -->
+
+  <div
+    class="assignment-list"
+    id="dashboardAssignmentList"
+  ></div>
+
+
+</section>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     RIGHT COLUMN
+===================================================== -->
+
+<aside class="dashboard-side-column">
+
+
+
+<!-- =====================================================
+     STUDENT PROFILE CARD
+===================================================== -->
+
+<section class="dashboard-card student-card">
+
+
+  <div
+    class="large-avatar"
+    id="largeAvatar"
+  >
+    ST
+  </div>
+
+
+  <h3 id="profileStudentName">
+    Student
+  </h3>
+
+
+  <p id="profileEmail">
+    student@email.com
+  </p>
+
+
+  <span class="student-badge">
+    🎓 Student
+  </span>
+
+
+
+  <div class="student-stats">
+
+
+    <!-- COURSES -->
+
+    <div>
+
+      <strong id="profileCoursesCount">
+        3
+      </strong>
+
+      <span>
+        Courses
+      </span>
+
+    </div>
+
+
+
+    <!-- COMPLETED -->
+
+    <div>
+
+      <strong id="profileCompletedCount">
+        0
+      </strong>
+
+      <span>
+        Lessons
+      </span>
+
+    </div>
+
+
+
+    <!-- QUIZ GRADE -->
+
+    <div>
+
+      <strong id="profileGrade">
+        0%
+      </strong>
+
+      <span>
+        Quiz Grade
+      </span>
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     LEARNING PROGRESS
+===================================================== -->
+
+<section class="dashboard-card">
+
+
+  <div class="side-header">
+
+    <h3>
+      Learning Progress
+    </h3>
+
+    <span>
+      📈
+    </span>
+
+  </div>
+
+
+
+  <div class="progress-circle-wrapper">
+
+
+    <div
+      class="progress-circle"
+      id="progressCircle"
+    >
+
+
+      <div class="progress-circle-inner">
+
+
+        <strong id="progressCircleValue">
+          0%
+        </strong>
+
+
+        <span>
+          Complete
+        </span>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+
+  <p
+    class="progress-message"
+    id="progressMessage"
+  >
+    Start your first lesson.
+  </p>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     RECENT GRADES
+===================================================== -->
+
+<section
+  class="dashboard-card"
+  id="grades"
+>
+
+
+  <div class="side-header">
+
+
+    <h3>
+      Recent Grades
+    </h3>
+
+
+    <a href="#grades">
+      View all
+    </a>
+
+
+  </div>
+
+
+
+  <div
+    class="grade-list"
+    id="gradeList"
+  >
+
+
+    <div class="empty-state">
+
+      Complete a lesson quiz
+      to see your grades here.
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+</aside>
+
+
+</div>
+
+
+</main>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     APPEARANCE MODAL
+===================================================== -->
+
+<div
+  class="appearance-modal"
+  id="appearanceModal"
+  aria-hidden="true"
+>
+
+
+  <div
+    class="appearance-dialog"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="appearanceTitle"
+  >
+
+
+
+    <!-- =================================================
+         HEADER
+    ================================================== -->
+
+    <div class="appearance-header">
+
+
+      <div>
+
+        <span>
+          PERSONALIZATION
+        </span>
+
+
+        <h2 id="appearanceTitle">
+          Choose appearance
+        </h2>
+
+
+        <p>
+          Select how EduSpace should look on this device.
+        </p>
+
+      </div>
+
+
+
+      <button
+        class="appearance-close"
+        id="appearanceCloseButton"
+        type="button"
+        aria-label="Close appearance settings"
+      >
+        ×
+      </button>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         THEME OPTIONS
+    ================================================== -->
+
+    <div class="theme-options">
+
+
+
+      <!-- =================================================
+           LIGHT
+      ================================================== -->
+
+      <button
+        class="theme-option"
+        type="button"
+        data-theme-option="light"
+      >
+
+
+        <div class="theme-preview light-preview">
+
+
+          <div class="preview-sidebar"></div>
+
+
+          <div class="preview-content">
+
+            <div class="preview-header"></div>
+
+            <div class="preview-card"></div>
+
+            <div class="preview-card small"></div>
+
+          </div>
+
+
+        </div>
+
+
+
+        <div class="theme-option-content">
+
+
+          <div class="theme-option-icon">
+            ☀️
+          </div>
+
+
+          <div>
+
+            <strong>
+              Light
+            </strong>
+
+            <span>
+              Bright and clean
+            </span>
+
+          </div>
+
+
+          <div class="theme-check">
+            ✓
+          </div>
+
+
+        </div>
+
+
+      </button>
+
+
+
+      <!-- =================================================
+           DARK
+      ================================================== -->
+
+      <button
+        class="theme-option"
+        type="button"
+        data-theme-option="dark"
+      >
+
+
+        <div class="theme-preview dark-preview">
+
+
+          <div class="preview-sidebar"></div>
+
+
+          <div class="preview-content">
+
+            <div class="preview-header"></div>
+
+            <div class="preview-card"></div>
+
+            <div class="preview-card small"></div>
+
+          </div>
+
+
+        </div>
+
+
+
+        <div class="theme-option-content">
+
+
+          <div class="theme-option-icon">
+            🌙
+          </div>
+
+
+          <div>
+
+            <strong>
+              Dark
+            </strong>
+
+            <span>
+              Easier in low light
+            </span>
+
+          </div>
+
+
+          <div class="theme-check">
+            ✓
+          </div>
+
+
+        </div>
+
+
+      </button>
+
+
+
+      <!-- =================================================
+           SYSTEM
+      ================================================== -->
+
+      <button
+        class="theme-option"
+        type="button"
+        data-theme-option="system"
+      >
+
+
+        <div class="theme-preview system-preview">
+
+
+          <div class="system-half light-half">
+
+            <div class="system-mini-sidebar"></div>
+
+            <div class="system-mini-card"></div>
+
+          </div>
+
+
+          <div class="system-half dark-half">
+
+            <div class="system-mini-sidebar"></div>
+
+            <div class="system-mini-card"></div>
+
+          </div>
+
+
+        </div>
+
+
+
+        <div class="theme-option-content">
+
+
+          <div class="theme-option-icon">
+            💻
+          </div>
+
+
+          <div>
+
+            <strong>
+              System
+            </strong>
+
+            <span>
+              Match your device
+            </span>
+
+          </div>
+
+
+          <div class="theme-check">
+            ✓
+          </div>
+
+
+        </div>
+
+
+      </button>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         APPEARANCE FOOTER
+    ================================================== -->
+
+    <div class="appearance-footer">
+
+
+      <div>
+
+        <span class="appearance-status-dot"></span>
+
+        <span id="appearanceStatus">
+          Using system appearance
+        </span>
+
+      </div>
+
+
+
+      <button
+        id="appearanceDoneButton"
+        type="button"
+      >
+        Done
+      </button>
+
+
+    </div>
+
+
+  </div>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     DASHBOARD TOAST
+===================================================== -->
+
+<div
+  class="dashboard-toast"
+  id="dashboardToast"
+></div>
+
+
+
+<!-- =====================================================
+     DASHBOARD JAVASCRIPT
+
+     theme.js + data.js are already loaded in <head>.
+     dashboard.js loads last because the HTML elements
+     must exist before the JavaScript accesses them.
+===================================================== -->
+
+<script src="dashboard.js"></script>
+<script src="avatar.js"></script>
+
+
+
+</body>
+
+</html>

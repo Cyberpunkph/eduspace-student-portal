@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Achievements | EduSpace</title>
+
+
+  <!-- GOOGLE FONT -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- SHARED SYSTEMS -->
+
+  <script src="theme.js"></script>
+
+  <script src="data.js"></script>
+
+
+  <!-- PAGE CSS -->
+
+  <link
+    rel="stylesheet"
+    href="achievements.css"
+  >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     MOBILE OVERLAY
+===================================================== -->
+
+<div
+  class="mobile-overlay"
+  id="mobileOverlay"
+></div>
+
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside
+  class="sidebar"
+  id="sidebar"
+>
+
+
+  <div class="logo">
+
+    <div class="logo-icon">
+      🎓
+    </div>
+
+    <span>
+      EduSpace
+    </span>
+
+  </div>
+
+
+
+  <nav class="sidebar-nav">
+
+
+    <a
+      href="dashboard.html"
+      class="nav-link"
+    >
+
+      <span class="nav-icon">
+        ⌂
+      </span>
+
+      <span>
+        Dashboard
+      </span>
+
+    </a>
+
+
+
+    <a
+      href="courses.html"
+      class="nav-link"
+    >
+
+      <span class="nav-icon">
+        📚
+      </span>
+
+      <span>
+        My Courses
+      </span>
+
+    </a>
+
+
+
+    <a
+      href="assignments.html"
+      class="nav-link"
+    >
+
+      <span class="nav-icon">
+        📝
+      </span>
+
+      <span>
+        Assignments
+      </span>
+
+    </a>
+
+
+
+    <a
+      href="dashboard.html#grades"
+      class="nav-link"
+    >
+
+      <span class="nav-icon">
+        📊
+      </span>
+
+      <span>
+        Grades
+      </span>
+
+    </a>
+
+
+
+    <a
+      href="schedule.html"
+      class="nav-link"
+    >
+
+      <span class="nav-icon">
+        📅
+      </span>
+
+      <span>
+        Schedule
+      </span>
+
+    </a>
+
+
+
+    <a
+      href="messages.html"
+      class="nav-link"
+    >
+
+      <span class="nav-icon">
+        💬
+      </span>
+
+      <span>
+        Messages
+      </span>
+
+    </a>
+
+
+
+    <a
+      href="achievements.html"
+      class="nav-link active"
+    >
+
+      <span class="nav-icon">
+        🏆
+      </span>
+
+      <span>
+        Achievements
+      </span>
+
+    </a>
+
+
+    <a
+  href="streak.html"
+  class="nav-link"
+>
+
+  <span class="nav-icon">
+    🔥
+  </span>
+
+  <span>
+    Learning Streak
+  </span>
+
+</a>
+
+
+  </nav>
+
+
+</aside>
+
+
+
+<!-- =====================================================
+     APP
+===================================================== -->
+
+<div class="app-shell">
+
+
+
+<!-- =====================================================
+     TOPBAR
+===================================================== -->
+
+<header class="topbar">
+
+
+  <div class="topbar-left">
+
+
+    <button
+      class="menu-button"
+      id="menuButton"
+      type="button"
+      aria-label="Open navigation"
+    >
+      ☰
+    </button>
+
+
+    <div>
+
+      <span class="topbar-label">
+        STUDENT PORTAL
+      </span>
+
+      <h1>
+        Achievements
+      </h1>
+
+    </div>
+
+
+  </div>
+
+
+
+  <div class="topbar-right">
+
+
+    <a
+      href="dashboard.html"
+      class="dashboard-button"
+    >
+      Dashboard
+    </a>
+
+
+
+    <a
+      href="profile.html"
+      class="student-profile"
+    >
+
+
+      <div
+        class="student-avatar"
+        id="studentAvatar"
+      >
+        ST
+      </div>
+
+
+      <div>
+
+        <strong id="studentName">
+          Student
+        </strong>
+
+        <span>
+          Student
+        </span>
+
+      </div>
+
+
+    </a>
+
+
+  </div>
+
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main class="achievements-page">
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="achievement-hero">
+
+
+  <div class="hero-content">
+
+
+    <span class="hero-label">
+      🏆 ACHIEVEMENTS
+    </span>
+
+
+    <h2>
+
+      Your learning journey
+
+      <span>
+        deserves recognition.
+      </span>
+
+    </h2>
+
+
+    <p>
+
+      Complete lessons, watch course videos,
+      take quizzes and build better study habits
+      to unlock achievement badges.
+
+    </p>
+
+
+  </div>
+
+
+
+  <div class="hero-trophy">
+    🏆
+  </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     ACHIEVEMENT SUMMARY
+===================================================== -->
+
+<section class="achievement-stats">
+
+
+  <article class="stat-card">
+
+    <div class="stat-icon">
+      🏅
+    </div>
+
+    <div>
+
+      <span>
+        Badges Unlocked
+      </span>
+
+      <strong id="unlockedCount">
+        0
+      </strong>
+
+    </div>
+
+  </article>
+
+
+
+  <article class="stat-card">
+
+    <div class="stat-icon">
+      🎯
+    </div>
+
+    <div>
+
+      <span>
+        Total Badges
+      </span>
+
+      <strong id="totalBadgeCount">
+        0
+      </strong>
+
+    </div>
+
+  </article>
+
+
+
+  <article class="stat-card">
+
+    <div class="stat-icon">
+      📚
+    </div>
+
+    <div>
+
+      <span>
+        Lessons Completed
+      </span>
+
+      <strong id="completedLessonCount">
+        0
+      </strong>
+
+    </div>
+
+  </article>
+
+
+
+  <article class="stat-card">
+
+    <div class="stat-icon">
+      ✨
+    </div>
+
+    <div>
+
+      <span>
+        Achievement Progress
+      </span>
+
+      <strong id="achievementPercentage">
+        0%
+      </strong>
+
+    </div>
+
+  </article>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     PROGRESS CARD
+===================================================== -->
+
+<section class="achievement-progress-card">
+
+
+  <div>
+
+
+    <span class="section-label">
+      YOUR COLLECTION
+    </span>
+
+    <h2>
+      Achievement Progress
+    </h2>
+
+    <p id="achievementMotivation">
+      Start learning to unlock your first badge.
+    </p>
+
+  </div>
+
+
+
+  <div class="achievement-progress-info">
+
+
+    <strong id="achievementProgressText">
+      0%
+    </strong>
+
+
+    <div class="achievement-progress-track">
+
+      <div
+        class="achievement-progress-fill"
+        id="achievementProgressFill"
+      ></div>
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     BADGES
+===================================================== -->
+
+<section class="badges-section">
+
+
+  <div class="badges-header">
+
+
+    <div>
+
+      <span>
+        BADGE COLLECTION
+      </span>
+
+      <h2>
+        Your Achievements
+      </h2>
+
+    </div>
+
+
+
+    <div class="badge-filters">
+
+
+      <button
+        class="badge-filter active"
+        type="button"
+        data-filter="all"
+      >
+        All
+      </button>
+
+
+      <button
+        class="badge-filter"
+        type="button"
+        data-filter="unlocked"
+      >
+        Unlocked
+      </button>
+
+
+      <button
+        class="badge-filter"
+        type="button"
+        data-filter="locked"
+      >
+        Locked
+      </button>
+
+
+    </div>
+
+
+  </div>
+
+
+
+  <div
+    class="achievement-grid"
+    id="achievementGrid"
+  ></div>
+
+
+
+  <div
+    class="achievement-empty"
+    id="achievementEmpty"
+  >
+
+    <span>
+      🏆
+    </span>
+
+    <strong>
+      No achievements found
+    </strong>
+
+    <p>
+      Try another filter.
+    </p>
+
+  </div>
+
+
+</section>
+
+
+</main>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     TOAST
+===================================================== -->
+
+<div
+  class="achievement-toast"
+  id="achievementToast"
+></div>
+
+
+
+<script src="achievements.js"></script>
+<script src="avatar.js"></script>
+
+
+</body>
+
+</html>

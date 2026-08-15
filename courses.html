@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>My Courses | EduSpace</title>
+
+
+  <!-- GOOGLE FONT -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- SHARED SYSTEMS -->
+
+  <script src="theme.js"></script>
+
+  <script src="data.js"></script>
+
+
+  <!-- PAGE CSS -->
+
+  <link
+    rel="stylesheet"
+    href="courses.css"
+  >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     MOBILE OVERLAY
+===================================================== -->
+
+<div
+  class="mobile-overlay"
+  id="mobileOverlay"
+></div>
+
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside
+  class="sidebar"
+  id="sidebar"
+>
+
+
+  <!-- LOGO -->
+
+  <div class="logo">
+
+    <div class="logo-icon">
+      🎓
+    </div>
+
+    <span>
+      EduSpace
+    </span>
+
+  </div>
+
+
+
+  <!-- NAVIGATION -->
+
+  <nav class="sidebar-nav">
+
+
+    <a
+      href="dashboard.html"
+      class="nav-link"
+    >
+
+      <span class="nav-icon">
+        ⌂
+      </span>
+
+      <span>
+        Dashboard
+      </span>
+
+    </a>
+
+
+
+    <a
+      href="courses.html"
+      class="nav-link active"
+    >
+
+      <span class="nav-icon">
+        📚
+      </span>
+
+      <span>
+        My Courses
+      </span>
+
+    </a>
+
+
+
+    <a
+      href="assignments.html"
+      class="nav-link"
+    >
+
+      <span class="nav-icon">
+        📝
+      </span>
+
+      <span>
+        Assignments
+      </span>
+
+    </a>
+
+
+
+    <a
+      href="dashboard.html#grades"
+      class="nav-link"
+    >
+
+      <span class="nav-icon">
+        📊
+      </span>
+
+      <span>
+        Grades
+      </span>
+
+    </a>
+
+
+
+    <a
+      href="schedule.html"
+      class="nav-link"
+    >
+
+      <span class="nav-icon">
+        📅
+      </span>
+
+      <span>
+        Schedule
+      </span>
+
+    </a>
+
+
+
+    <a
+      href="messages.html"
+      class="nav-link"
+    >
+
+      <span class="nav-icon">
+        💬
+      </span>
+
+      <span>
+        Messages
+      </span>
+
+    </a>
+
+
+    
+    <a
+  href="achievements.html"
+  class="nav-link"
+>
+
+  <span class="nav-icon">
+    🏆
+  </span>
+
+  <span>
+    Achievements
+  </span>
+
+</a>
+
+
+<a
+  href="streak.html"
+  class="nav-link"
+>
+
+  <span class="nav-icon">
+    🔥
+  </span>
+
+  <span>
+    Learning Streak
+  </span>
+
+</a>
+
+
+<a
+  href="bookmarks.html"
+  class="nav-link"
+>
+
+  <span class="nav-icon">
+    🔖
+  </span>
+
+  <span>
+    Saved Lessons
+  </span>
+
+</a>
+
+
+  </nav>
+
+
+</aside>
+
+
+
+<!-- =====================================================
+     APP
+===================================================== -->
+
+<div class="app-shell">
+
+
+
+<!-- =====================================================
+     TOPBAR
+===================================================== -->
+
+<header class="topbar">
+
+
+  <div class="topbar-left">
+
+
+    <button
+      class="menu-button"
+      id="menuButton"
+      type="button"
+      aria-label="Open navigation"
+    >
+      ☰
+    </button>
+
+
+    <div>
+
+      <span class="topbar-label">
+        STUDENT PORTAL
+      </span>
+
+      <h1>
+        My Courses
+      </h1>
+
+    </div>
+
+
+  </div>
+
+
+
+  <div class="topbar-right">
+
+
+    <a
+      href="dashboard.html"
+      class="dashboard-button"
+    >
+      Dashboard
+    </a>
+
+
+
+    <a
+      href="profile.html"
+      class="student-profile"
+    >
+
+
+      <div
+        class="student-avatar"
+        id="studentAvatar"
+      >
+        ST
+      </div>
+
+
+      <div>
+
+        <strong id="studentName">
+          Student
+        </strong>
+
+        <span>
+          Student
+        </span>
+
+      </div>
+
+
+    </a>
+
+
+  </div>
+
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main class="courses-page">
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="courses-hero">
+
+
+  <div>
+
+
+    <span class="hero-label">
+      📚 COURSE LIBRARY
+    </span>
+
+
+    <h2>
+
+      Continue building your
+
+      <span>
+        skills.
+      </span>
+
+    </h2>
+
+
+    <p>
+
+      Browse your courses, check your progress,
+      and continue from your most recent lesson.
+
+    </p>
+
+
+  </div>
+
+
+
+  <div class="hero-illustration">
+    📖
+  </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     STATS
+===================================================== -->
+
+<section class="course-stats">
+
+
+
+  <article class="stat-card">
+
+
+    <div class="stat-icon">
+      📚
+    </div>
+
+
+    <div>
+
+      <span>
+        Enrolled Courses
+      </span>
+
+      <strong id="enrolledCoursesCount">
+        0
+      </strong>
+
+    </div>
+
+
+  </article>
+
+
+
+  <article class="stat-card">
+
+
+    <div class="stat-icon">
+      ✅
+    </div>
+
+
+    <div>
+
+      <span>
+        Completed Courses
+      </span>
+
+      <strong id="completedCoursesCount">
+        0
+      </strong>
+
+    </div>
+
+
+  </article>
+
+
+
+  <article class="stat-card">
+
+
+    <div class="stat-icon">
+      🎯
+    </div>
+
+
+    <div>
+
+      <span>
+        Lessons Completed
+      </span>
+
+      <strong id="completedLessonsCount">
+        0
+      </strong>
+
+    </div>
+
+
+  </article>
+
+
+
+  <article class="stat-card">
+
+
+    <div class="stat-icon">
+      📈
+    </div>
+
+
+    <div>
+
+      <span>
+        Overall Progress
+      </span>
+
+      <strong id="overallProgressCount">
+        0%
+      </strong>
+
+    </div>
+
+
+  </article>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     LIBRARY
+===================================================== -->
+
+<section class="library-card">
+
+
+
+  <!-- HEADER -->
+
+  <div class="library-header">
+
+
+    <div>
+
+      <span>
+        YOUR LEARNING
+      </span>
+
+      <h2>
+        Course Library
+      </h2>
+
+    </div>
+
+
+    <div class="course-search">
+
+
+      <span>
+        🔍
+      </span>
+
+
+      <input
+        type="search"
+        id="courseSearch"
+        placeholder="Search courses..."
+        autocomplete="off"
+      >
+
+
+    </div>
+
+
+  </div>
+
+
+
+  <!-- FILTERS -->
+
+  <div
+    class="course-filters"
+    id="courseFilters"
+  >
+
+
+    <button
+      class="course-filter active"
+      type="button"
+      data-filter="all"
+    >
+      All Courses
+    </button>
+
+
+    <button
+      class="course-filter"
+      type="button"
+      data-filter="in-progress"
+    >
+      In Progress
+    </button>
+
+
+    <button
+      class="course-filter"
+      type="button"
+      data-filter="not-started"
+    >
+      Not Started
+    </button>
+
+
+    <button
+      class="course-filter"
+      type="button"
+      data-filter="completed"
+    >
+      Completed
+    </button>
+
+
+  </div>
+
+
+
+  <!-- COURSE GRID -->
+
+  <div
+    class="course-library-grid"
+    id="courseLibraryGrid"
+  ></div>
+
+
+
+  <!-- EMPTY STATE -->
+
+  <div
+    class="course-empty"
+    id="courseEmpty"
+  >
+
+
+    <div>
+      🔎
+    </div>
+
+
+    <h3>
+      No courses found
+    </h3>
+
+
+    <p>
+      Try changing your search or filter.
+    </p>
+
+
+  </div>
+
+
+</section>
+
+
+</main>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     TOAST
+===================================================== -->
+
+<div
+  class="courses-toast"
+  id="coursesToast"
+></div>
+
+
+
+<script src="courses.js"></script>
+<script src="avatar.js"></script>
+
+</body>
+
+</html>

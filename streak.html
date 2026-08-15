@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Learning Streak | EduSpace</title>
+
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- SHARED -->
+
+  <script src="theme.js"></script>
+
+  <script src="data.js"></script>
+
+
+  <!-- PAGE CSS -->
+
+  <link
+    rel="stylesheet"
+    href="streak.css"
+  >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     MOBILE OVERLAY
+===================================================== -->
+
+<div
+  class="mobile-overlay"
+  id="mobileOverlay"
+></div>
+
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside
+  class="sidebar"
+  id="sidebar"
+>
+
+
+  <div class="logo">
+
+    <div class="logo-icon">
+      🎓
+    </div>
+
+    <span>
+      EduSpace
+    </span>
+
+  </div>
+
+
+
+  <nav class="sidebar-nav">
+
+
+    <a
+      href="dashboard.html"
+      class="nav-link"
+    >
+      <span class="nav-icon">⌂</span>
+      <span>Dashboard</span>
+    </a>
+
+
+    <a
+      href="courses.html"
+      class="nav-link"
+    >
+      <span class="nav-icon">📚</span>
+      <span>My Courses</span>
+    </a>
+
+
+    <a
+      href="assignments.html"
+      class="nav-link"
+    >
+      <span class="nav-icon">📝</span>
+      <span>Assignments</span>
+    </a>
+
+
+    <a
+      href="dashboard.html#grades"
+      class="nav-link"
+    >
+      <span class="nav-icon">📊</span>
+      <span>Grades</span>
+    </a>
+
+
+    <a
+      href="schedule.html"
+      class="nav-link"
+    >
+      <span class="nav-icon">📅</span>
+      <span>Schedule</span>
+    </a>
+
+
+    <a
+      href="messages.html"
+      class="nav-link"
+    >
+      <span class="nav-icon">💬</span>
+      <span>Messages</span>
+    </a>
+
+
+    <a
+      href="achievements.html"
+      class="nav-link"
+    >
+      <span class="nav-icon">🏆</span>
+      <span>Achievements</span>
+    </a>
+
+
+    <a
+      href="streak.html"
+      class="nav-link active"
+    >
+      <span class="nav-icon">🔥</span>
+      <span>Learning Streak</span>
+    </a>
+
+
+    <a
+  href="bookmarks.html"
+  class="nav-link"
+>
+
+  <span class="nav-icon">
+    🔖
+  </span>
+
+  <span>
+    Saved Lessons
+  </span>
+
+</a>
+
+
+  </nav>
+
+
+</aside>
+
+
+
+<!-- =====================================================
+     APP
+===================================================== -->
+
+<div class="app-shell">
+
+
+
+<!-- =====================================================
+     TOPBAR
+===================================================== -->
+
+<header class="topbar">
+
+
+  <div class="topbar-left">
+
+
+    <button
+      class="menu-button"
+      id="menuButton"
+      type="button"
+      aria-label="Open navigation"
+    >
+      ☰
+    </button>
+
+
+    <div>
+
+      <span class="topbar-label">
+        STUDENT PORTAL
+      </span>
+
+      <h1>
+        Learning Streak
+      </h1>
+
+    </div>
+
+
+  </div>
+
+
+
+  <a
+    href="profile.html"
+    class="student-profile"
+  >
+
+
+    <div
+      class="student-avatar"
+      id="studentAvatar"
+    >
+      ST
+    </div>
+
+
+    <div>
+
+      <strong id="studentName">
+        Student
+      </strong>
+
+      <span>
+        Student
+      </span>
+
+    </div>
+
+
+  </a>
+
+
+</header>
+
+
+
+<!-- =====================================================
+     PAGE
+===================================================== -->
+
+<main class="streak-page">
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="streak-hero">
+
+
+  <div class="hero-content">
+
+
+    <span class="hero-label">
+      🔥 LEARNING STREAK
+    </span>
+
+
+    <h2>
+
+      Build a habit.
+
+      <span>
+        Learn every day.
+      </span>
+
+    </h2>
+
+
+    <p>
+
+      Every active study day keeps your learning
+      streak moving. Watch lessons, complete coursework,
+      save notes, take quizzes or record a study session.
+
+    </p>
+
+
+  </div>
+
+
+
+  <div class="hero-fire">
+    🔥
+  </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     STATS
+===================================================== -->
+
+<section class="streak-stats">
+
+
+  <article class="stat-card current">
+
+
+    <div class="stat-icon">
+      🔥
+    </div>
+
+
+    <div>
+
+      <span>
+        Current Streak
+      </span>
+
+      <strong id="currentStreak">
+        0 days
+      </strong>
+
+    </div>
+
+
+  </article>
+
+
+
+  <article class="stat-card">
+
+
+    <div class="stat-icon">
+      🏆
+    </div>
+
+
+    <div>
+
+      <span>
+        Longest Streak
+      </span>
+
+      <strong id="longestStreak">
+        0 days
+      </strong>
+
+    </div>
+
+
+  </article>
+
+
+
+  <article class="stat-card">
+
+
+    <div class="stat-icon">
+      📅
+    </div>
+
+
+    <div>
+
+      <span>
+        Active Days
+      </span>
+
+      <strong id="activeDays">
+        0
+      </strong>
+
+    </div>
+
+
+  </article>
+
+
+
+  <article class="stat-card">
+
+
+    <div class="stat-icon">
+      🎯
+    </div>
+
+
+    <div>
+
+      <span>
+        This Week
+      </span>
+
+      <strong id="weekActiveDays">
+        0 / 7
+      </strong>
+
+    </div>
+
+
+  </article>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     STUDY TODAY
+===================================================== -->
+
+<section class="study-today-card">
+
+
+  <div class="study-today-icon">
+    ⚡
+  </div>
+
+
+
+  <div class="study-today-copy">
+
+
+    <span>
+      TODAY'S GOAL
+    </span>
+
+
+    <h2 id="studyTodayTitle">
+      Study today
+    </h2>
+
+
+    <p id="studyTodayMessage">
+      Start today's learning session to build your streak.
+    </p>
+
+
+  </div>
+
+
+
+  <button
+    class="study-today-button"
+    id="studyTodayButton"
+    type="button"
+  >
+    ⚡ Study Today
+  </button>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     DASHBOARD GRID
+===================================================== -->
+
+<div class="streak-grid">
+
+
+
+<!-- =====================================================
+     WEEKLY ACTIVITY
+===================================================== -->
+
+<section class="streak-card weekly-card">
+
+
+  <div class="card-heading">
+
+
+    <div>
+
+      <span>
+        LAST 7 DAYS
+      </span>
+
+      <h2>
+        Weekly Activity
+      </h2>
+
+    </div>
+
+
+    <div class="weekly-summary">
+
+      <strong id="weeklyActivityTotal">
+        0
+      </strong>
+
+      <span>
+        activities
+      </span>
+
+    </div>
+
+
+  </div>
+
+
+
+  <div
+    class="weekly-chart"
+    id="weeklyChart"
+  ></div>
+
+
+
+  <div class="weekly-footer">
+
+
+    <span class="legend-item">
+
+      <span class="legend-dot active"></span>
+
+      Active day
+
+    </span>
+
+
+    <span class="legend-item">
+
+      <span class="legend-dot"></span>
+
+      No activity
+
+    </span>
+
+
+  </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     STREAK SUMMARY
+===================================================== -->
+
+<section class="streak-card summary-card">
+
+
+  <div class="card-heading">
+
+
+    <div>
+
+      <span>
+        STREAK STATUS
+      </span>
+
+      <h2>
+        Keep the fire going
+      </h2>
+
+    </div>
+
+
+    <span class="summary-fire">
+      🔥
+    </span>
+
+
+  </div>
+
+
+
+  <div class="streak-ring-wrapper">
+
+
+    <div
+      class="streak-ring"
+      id="streakRing"
+    >
+
+
+      <div class="streak-ring-inner">
+
+
+        <strong id="streakRingValue">
+          0
+        </strong>
+
+
+        <span>
+          days
+        </span>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+
+  <p
+    class="streak-message"
+    id="streakMessage"
+  >
+    Start learning today to begin a streak.
+  </p>
+
+
+</section>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     CALENDAR
+===================================================== -->
+
+<section class="streak-card calendar-card">
+
+
+  <div class="calendar-header">
+
+
+    <div>
+
+      <span>
+        LEARNING HISTORY
+      </span>
+
+      <h2 id="calendarMonthTitle">
+        Month
+      </h2>
+
+    </div>
+
+
+
+    <div class="calendar-navigation">
+
+
+      <button
+        id="previousMonthButton"
+        type="button"
+        aria-label="Previous month"
+      >
+        ←
+      </button>
+
+
+      <button
+        id="todayMonthButton"
+        type="button"
+      >
+        Today
+      </button>
+
+
+      <button
+        id="nextMonthButton"
+        type="button"
+        aria-label="Next month"
+      >
+        →
+      </button>
+
+
+    </div>
+
+
+  </div>
+
+
+
+  <div class="calendar-weekdays">
+
+    <span>Sun</span>
+    <span>Mon</span>
+    <span>Tue</span>
+    <span>Wed</span>
+    <span>Thu</span>
+    <span>Fri</span>
+    <span>Sat</span>
+
+  </div>
+
+
+
+  <div
+    class="learning-calendar"
+    id="learningCalendar"
+  ></div>
+
+
+
+  <div class="calendar-legend">
+
+
+    <span>
+
+      <i class="calendar-dot studied"></i>
+
+      Studied
+
+    </span>
+
+
+    <span>
+
+      <i class="calendar-dot today"></i>
+
+      Today
+
+    </span>
+
+
+  </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     ACTIVITY BREAKDOWN
+===================================================== -->
+
+<section class="streak-card activity-card">
+
+
+  <div class="card-heading">
+
+
+    <div>
+
+      <span>
+        STUDY ACTIVITY
+      </span>
+
+      <h2>
+        Activity Breakdown
+      </h2>
+
+    </div>
+
+
+  </div>
+
+
+
+  <div
+    class="activity-breakdown"
+    id="activityBreakdown"
+  ></div>
+
+
+</section>
+
+
+</main>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     TOAST
+===================================================== -->
+
+<div
+  class="streak-toast"
+  id="streakToast"
+></div>
+
+
+
+<script src="streak.js"></script>
+<script src="avatar.js"></script>
+
+
+</body>
+
+</html>

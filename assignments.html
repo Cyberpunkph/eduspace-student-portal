@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <script src="theme.js"></script>
+<script src="data.js"></script>
+
+<link
+  rel="stylesheet"
+  href="assignments.css"
+>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Assignments | EduSpace</title>
+
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- SHARED THEME -->
+
+  <script src="theme.js"></script>
+
+
+  <link
+    rel="stylesheet"
+    href="assignments.css"
+  >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     MOBILE OVERLAY
+===================================================== -->
+
+<div
+  class="mobile-overlay"
+  id="mobileOverlay"
+></div>
+
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside
+  class="sidebar"
+  id="sidebar"
+>
+
+
+  <div class="logo">
+
+    <div class="logo-icon">
+      🎓
+    </div>
+
+    <span>
+      EduSpace
+    </span>
+
+  </div>
+
+
+
+  <nav class="sidebar-nav">
+
+
+    <a
+      href="dashboard.html"
+      class="nav-link"
+    >
+
+      <span class="nav-icon">
+        ⌂
+      </span>
+
+      Dashboard
+
+    </a>
+
+
+    <a
+      href="dashboard.html#courses"
+      class="nav-link"
+    >
+
+      <span class="nav-icon">
+        📚
+      </span>
+
+      My Courses
+
+    </a>
+
+
+    <a
+      href="assignments.html"
+      class="nav-link active"
+    >
+
+      <span class="nav-icon">
+        📝
+      </span>
+
+      Assignments
+
+    </a>
+
+
+    <a
+      href="dashboard.html#grades"
+      class="nav-link"
+    >
+
+      <span class="nav-icon">
+        📊
+      </span>
+
+      Grades
+
+    </a>
+
+
+    <a
+      href="schedule.html"
+      class="nav-link"
+    >
+
+      <span class="nav-icon">
+        📅
+      </span>
+
+      Schedule
+
+    </a>
+
+
+    <a
+      href="messages.html"
+      class="nav-link"
+    >
+
+      <span class="nav-icon">
+        💬
+      </span>
+
+      Messages
+
+    </a>
+
+
+    <a
+  href="achievements.html"
+  class="nav-link"
+>
+
+  <span class="nav-icon">
+    🏆
+  </span>
+
+  <span>
+    Achievements
+  </span>
+
+</a>
+
+
+<a
+  href="streak.html"
+  class="nav-link"
+>
+
+  <span class="nav-icon">
+    🔥
+  </span>
+
+  <span>
+    Learning Streak
+  </span>
+
+</a>
+
+
+<a
+  href="bookmarks.html"
+  class="nav-link"
+>
+
+  <span class="nav-icon">
+    🔖
+  </span>
+
+  <span>
+    Saved Lessons
+  </span>
+
+</a>
+
+
+  </nav>
+
+
+</aside>
+
+
+
+<!-- =====================================================
+     APP SHELL
+===================================================== -->
+
+<div class="app-shell">
+
+
+
+<!-- =====================================================
+     TOPBAR
+===================================================== -->
+
+<header class="topbar">
+
+
+  <div class="topbar-left">
+
+
+    <button
+      class="menu-button"
+      id="menuButton"
+      type="button"
+      aria-label="Open menu"
+    >
+      ☰
+    </button>
+
+
+    <div>
+
+      <span class="topbar-label">
+        STUDENT PORTAL
+      </span>
+
+      <h1>
+        Assignments
+      </h1>
+
+    </div>
+
+
+  </div>
+
+
+
+  <div class="topbar-right">
+
+
+    <a
+      href="schedule.html"
+      class="topbar-action"
+    >
+      📅 Schedule
+    </a>
+
+
+    <a
+      href="profile.html"
+      class="student-profile"
+    >
+
+
+      <div
+        class="avatar"
+        id="topAvatar"
+      >
+        ST
+      </div>
+
+
+      <div>
+
+        <strong id="topStudentName">
+          Student
+        </strong>
+
+        <span>
+          Student
+        </span>
+
+      </div>
+
+
+    </a>
+
+
+  </div>
+
+
+</header>
+
+
+
+<!-- =====================================================
+     PAGE CONTENT
+===================================================== -->
+
+<main class="assignments-content">
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="assignments-hero">
+
+
+  <div>
+
+
+    <span class="hero-badge">
+      📝 ASSIGNMENT CENTER
+    </span>
+
+
+    <h2>
+
+      Keep your work
+
+      <span>
+        on track.
+      </span>
+
+    </h2>
+
+
+    <p>
+      Review assignment instructions, monitor deadlines,
+      submit your work, and keep track of completed tasks.
+    </p>
+
+
+  </div>
+
+
+  <a
+    href="schedule.html"
+    class="hero-schedule-button"
+  >
+    View Schedule →
+  </a>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     STATS
+===================================================== -->
+
+<section class="assignment-stats">
+
+
+  <article class="stat-card">
+
+    <div class="stat-icon purple">
+      📋
+    </div>
+
+    <div>
+
+      <span>
+        Total
+      </span>
+
+      <strong id="totalAssignments">
+        0
+      </strong>
+
+    </div>
+
+  </article>
+
+
+
+  <article class="stat-card">
+
+    <div class="stat-icon orange">
+      ⏳
+    </div>
+
+    <div>
+
+      <span>
+        Upcoming
+      </span>
+
+      <strong id="upcomingAssignments">
+        0
+      </strong>
+
+    </div>
+
+  </article>
+
+
+
+  <article class="stat-card">
+
+    <div class="stat-icon blue">
+      📤
+    </div>
+
+    <div>
+
+      <span>
+        Submitted
+      </span>
+
+      <strong id="submittedAssignments">
+        0
+      </strong>
+
+    </div>
+
+  </article>
+
+
+
+  <article class="stat-card">
+
+    <div class="stat-icon green">
+      ✅
+    </div>
+
+    <div>
+
+      <span>
+        Completed
+      </span>
+
+      <strong id="completedAssignments">
+        0
+      </strong>
+
+    </div>
+
+  </article>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     MAIN CARD
+===================================================== -->
+
+<section class="assignments-panel">
+
+
+
+<!-- =====================================================
+     PANEL HEADER
+===================================================== -->
+
+<div class="panel-header">
+
+
+  <div>
+
+    <span>
+      YOUR WORK
+    </span>
+
+    <h2>
+      Assignments
+    </h2>
+
+    <p id="resultCount">
+      0 assignments
+    </p>
+
+  </div>
+
+
+
+  <div class="panel-tools">
+
+
+    <div class="assignment-search">
+
+      <span>
+        🔍
+      </span>
+
+      <input
+        type="search"
+        id="assignmentSearch"
+        placeholder="Search assignments..."
+        autocomplete="off"
+      >
+
+    </div>
+
+
+
+    <select
+      id="courseFilter"
+      class="course-filter"
+    >
+
+      <option value="all">
+        All Courses
+      </option>
+
+      <option value="web-development">
+        Web Development
+      </option>
+
+      <option value="mathematics">
+        Mathematics
+      </option>
+
+      <option value="ui-ux">
+        UI/UX Design
+      </option>
+
+    </select>
+
+
+  </div>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     FILTER TABS
+===================================================== -->
+
+<div class="assignment-tabs">
+
+
+  <button
+    class="assignment-tab active"
+    type="button"
+    data-filter="all"
+  >
+    All
+
+    <span id="allTabCount">
+      0
+    </span>
+  </button>
+
+
+  <button
+    class="assignment-tab"
+    type="button"
+    data-filter="upcoming"
+  >
+    Upcoming
+
+    <span id="upcomingTabCount">
+      0
+    </span>
+  </button>
+
+
+  <button
+    class="assignment-tab"
+    type="button"
+    data-filter="submitted"
+  >
+    Submitted
+
+    <span id="submittedTabCount">
+      0
+    </span>
+  </button>
+
+
+  <button
+    class="assignment-tab"
+    type="button"
+    data-filter="overdue"
+  >
+    Overdue
+
+    <span id="overdueTabCount">
+      0
+    </span>
+  </button>
+
+
+  <button
+    class="assignment-tab"
+    type="button"
+    data-filter="completed"
+  >
+    Completed
+
+    <span id="completedTabCount">
+      0
+    </span>
+  </button>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     ASSIGNMENT LIST
+===================================================== -->
+
+<div
+  class="assignment-list"
+  id="assignmentList"
+></div>
+
+
+
+<!-- EMPTY STATE -->
+
+<div
+  class="assignment-empty"
+  id="assignmentEmpty"
+>
+
+  <div>
+    📭
+  </div>
+
+  <h3>
+    No assignments found
+  </h3>
+
+  <p>
+    Try changing your filter or search.
+  </p>
+
+</div>
+
+
+</section>
+
+
+</main>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     ASSIGNMENT DETAILS MODAL
+===================================================== -->
+
+<div
+  class="modal-overlay"
+  id="assignmentModal"
+  aria-hidden="true"
+>
+
+
+  <div
+    class="assignment-dialog"
+    role="dialog"
+    aria-modal="true"
+  >
+
+
+    <!-- HEADER -->
+
+    <div class="modal-header">
+
+
+      <div>
+
+        <span id="modalCourseLabel">
+          COURSE
+        </span>
+
+
+        <h2 id="modalAssignmentTitle">
+          Assignment
+        </h2>
+
+
+        <div class="modal-header-meta">
+
+          <span id="modalStatusBadge">
+            Upcoming
+          </span>
+
+          <span id="modalDueDate">
+            Due date
+          </span>
+
+        </div>
+
+
+      </div>
+
+
+      <button
+        class="modal-close"
+        id="closeAssignmentModal"
+        type="button"
+        aria-label="Close"
+      >
+        ×
+      </button>
+
+
+    </div>
+
+
+
+    <!-- BODY -->
+
+    <div class="assignment-modal-body">
+
+
+
+      <!-- MAIN DETAILS -->
+
+      <div class="modal-main-column">
+
+
+        <!-- DESCRIPTION -->
+
+        <section class="modal-section">
+
+
+          <div class="modal-section-title">
+
+            <span>
+              📄
+            </span>
+
+            <h3>
+              Assignment Overview
+            </h3>
+
+          </div>
+
+
+          <p
+            class="assignment-description"
+            id="modalDescription"
+          ></p>
+
+
+        </section>
+
+
+
+        <!-- REQUIREMENTS -->
+
+        <section class="modal-section">
+
+
+          <div class="modal-section-title">
+
+            <span>
+              ✅
+            </span>
+
+            <h3>
+              Requirements
+            </h3>
+
+          </div>
+
+
+          <ul
+            class="requirements-list"
+            id="modalRequirements"
+          ></ul>
+
+
+        </section>
+
+
+
+        <!-- MATERIALS -->
+
+        <section class="modal-section">
+
+
+          <div class="modal-section-title">
+
+            <span>
+              📎
+            </span>
+
+            <h3>
+              Assignment Materials
+            </h3>
+
+          </div>
+
+
+          <div
+            class="materials-list"
+            id="modalMaterials"
+          ></div>
+
+
+        </section>
+
+
+
+        <!-- SUBMISSION -->
+
+        <section
+          class="modal-section submission-section"
+          id="submissionSection"
+        >
+
+
+          <div class="modal-section-title">
+
+            <span>
+              📤
+            </span>
+
+            <h3>
+              Your Submission
+            </h3>
+
+          </div>
+
+
+
+          <!-- BEFORE SUBMISSION -->
+
+          <div
+            id="submissionFormArea"
+          >
+
+
+            <label
+              class="upload-area"
+              for="submissionFile"
+            >
+
+
+              <input
+                type="file"
+                id="submissionFile"
+                hidden
+              >
+
+
+              <div class="upload-icon">
+                ☁️
+              </div>
+
+
+              <strong id="uploadTitle">
+                Upload assignment file
+              </strong>
+
+
+              <span id="uploadDescription">
+                PDF, DOCX, ZIP, PNG or JPG
+              </span>
+
+
+              <small>
+                Maximum recommended size: 10 MB
+              </small>
+
+
+            </label>
+
+
+
+            <div
+              class="selected-file"
+              id="selectedFile"
+            >
+
+
+              <div class="selected-file-icon">
+                📄
+              </div>
+
+
+              <div>
+
+                <strong id="selectedFileName">
+                  file.pdf
+                </strong>
+
+                <span id="selectedFileSize">
+                  0 KB
+                </span>
+
+              </div>
+
+
+              <button
+                type="button"
+                id="removeSelectedFile"
+              >
+                ×
+              </button>
+
+
+            </div>
+
+
+
+            <div class="submission-note-group">
+
+              <label for="submissionNote">
+                Submission Note
+              </label>
+
+              <textarea
+                id="submissionNote"
+                placeholder="Add an optional note for your instructor..."
+                maxlength="500"
+              ></textarea>
+
+            </div>
+
+
+
+            <button
+              class="submit-assignment-button"
+              id="submitAssignmentButton"
+              type="button"
+            >
+              Submit Assignment
+            </button>
+
+
+          </div>
+
+
+
+          <!-- AFTER SUBMISSION -->
+
+          <div
+            class="submitted-panel"
+            id="submittedPanel"
+          >
+
+
+            <div class="submitted-success">
+
+              <div>
+                ✓
+              </div>
+
+              <div>
+
+                <strong>
+                  Assignment submitted
+                </strong>
+
+                <span id="submittedTime">
+                  Submitted
+                </span>
+
+              </div>
+
+            </div>
+
+
+
+            <div class="submitted-file-info">
+
+
+              <span>
+                Submitted File
+              </span>
+
+
+              <strong id="submittedFileName">
+                assignment.pdf
+              </strong>
+
+
+            </div>
+
+
+
+            <div
+              class="submitted-note"
+              id="submittedNoteContainer"
+            >
+
+              <span>
+                Your Note
+              </span>
+
+              <p id="submittedNote"></p>
+
+            </div>
+
+
+          </div>
+
+
+        </section>
+
+
+      </div>
+
+
+
+      <!-- SIDE INFORMATION -->
+
+      <aside class="modal-side-column">
+
+
+
+        <!-- DEADLINE -->
+
+        <section class="assignment-info-card">
+
+
+          <span class="info-card-label">
+            DEADLINE
+          </span>
+
+
+          <div class="deadline-display">
+
+            <div class="deadline-icon">
+              📅
+            </div>
+
+            <div>
+
+              <strong id="sideDueDate">
+                August 18
+              </strong>
+
+              <span id="sideDueTime">
+                11:59 PM
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div
+            class="deadline-message"
+            id="deadlineMessage"
+          >
+            Due soon
+          </div>
+
+
+        </section>
+
+
+
+        <!-- POINTS -->
+
+        <section class="assignment-info-card">
+
+
+          <span class="info-card-label">
+            ASSIGNMENT DETAILS
+          </span>
+
+
+          <div class="info-stat-row">
+
+            <span>
+              Points
+            </span>
+
+            <strong id="modalPoints">
+              100
+            </strong>
+
+          </div>
+
+
+          <div class="info-stat-row">
+
+            <span>
+              Course
+            </span>
+
+            <strong id="modalCourseName">
+              Web Development
+            </strong>
+
+          </div>
+
+
+          <div class="info-stat-row">
+
+            <span>
+              Type
+            </span>
+
+            <strong id="modalAssignmentType">
+              Project
+            </strong>
+
+          </div>
+
+
+        </section>
+
+
+
+        <!-- GRADE -->
+
+        <section
+          class="assignment-info-card grade-card"
+          id="gradeCard"
+        >
+
+
+          <span class="info-card-label">
+            GRADE
+          </span>
+
+
+          <div class="grade-result">
+
+            <strong id="modalGrade">
+              92%
+            </strong>
+
+            <span>
+              Graded
+            </span>
+
+          </div>
+
+
+          <p id="modalFeedback">
+            Great work!
+          </p>
+
+
+        </section>
+
+
+      </aside>
+
+
+    </div>
+
+
+  </div>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     CONFIRM SUBMISSION MODAL
+===================================================== -->
+
+<div
+  class="modal-overlay"
+  id="confirmSubmissionModal"
+  aria-hidden="true"
+>
+
+
+  <div class="confirm-dialog">
+
+
+    <div class="confirm-icon">
+      📤
+    </div>
+
+
+    <h2>
+      Submit assignment?
+    </h2>
+
+
+    <p>
+      Make sure you selected the correct file before
+      submitting your work.
+    </p>
+
+
+    <div class="confirm-actions">
+
+
+      <button
+        class="confirm-cancel"
+        id="cancelSubmissionButton"
+        type="button"
+      >
+        Cancel
+      </button>
+
+
+      <button
+        class="confirm-submit"
+        id="confirmSubmissionButton"
+        type="button"
+      >
+        Yes, Submit
+      </button>
+
+
+    </div>
+
+
+  </div>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     TOAST
+===================================================== -->
+
+<div
+  class="assignment-toast"
+  id="assignmentToast"
+></div>
+
+
+<script src="assignments.js"></script>
+<script src="avatar.js"></script>
+
+
+</body>
+
+</html>

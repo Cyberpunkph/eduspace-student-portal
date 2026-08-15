@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <script src="theme.js"></script>
+<script src="data.js"></script>
+
+<link
+  rel="stylesheet"
+  href="schedule.css"
+>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Schedule | EduSpace</title>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- EXISTING SHARED THEME SYSTEM -->
+  <script src="theme.js"></script>
+
+  <link
+    rel="stylesheet"
+    href="schedule.css"
+  >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     MOBILE OVERLAY
+===================================================== -->
+
+<div
+  class="mobile-overlay"
+  id="mobileOverlay"
+></div>
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside
+  class="sidebar"
+  id="sidebar"
+>
+
+
+  <div class="logo">
+
+    <div class="logo-icon">
+      🎓
+    </div>
+
+    <span>
+      EduSpace
+    </span>
+
+  </div>
+
+
+  <nav class="sidebar-nav">
+
+
+    <a
+      href="dashboard.html"
+      class="nav-link"
+    >
+
+      <span class="nav-icon">
+        ⌂
+      </span>
+
+      Dashboard
+
+    </a>
+
+
+    <a
+      href="dashboard.html#courses"
+      class="nav-link"
+    >
+
+      <span class="nav-icon">
+        📚
+      </span>
+
+      My Courses
+
+    </a>
+
+
+    <a
+      href="assignments.html"
+      class="nav-link"
+    >
+
+      <span class="nav-icon">
+        📝
+      </span>
+
+      Assignments
+
+    </a>
+
+
+    <a
+      href="dashboard.html#grades"
+      class="nav-link"
+    >
+
+      <span class="nav-icon">
+        📊
+      </span>
+
+      Grades
+
+    </a>
+
+
+    <a
+      href="schedule.html"
+      class="nav-link active"
+    >
+
+      <span class="nav-icon">
+        📅
+      </span>
+
+      Schedule
+
+    </a>
+
+
+    <a
+      href="messages.html"
+      class="nav-link"
+    >
+
+      <span class="nav-icon">
+        💬
+      </span>
+
+      Messages
+
+    </a>
+
+
+    <a
+  href="achievements.html"
+  class="nav-link"
+>
+
+  <span class="nav-icon">
+    🏆
+  </span>
+
+  <span>
+    Achievements
+  </span>
+
+</a>
+
+
+<a
+  href="streak.html"
+  class="nav-link"
+>
+
+  <span class="nav-icon">
+    🔥
+  </span>
+
+  <span>
+    Learning Streak
+  </span>
+
+</a>
+
+
+<a
+  href="bookmarks.html"
+  class="nav-link"
+>
+
+  <span class="nav-icon">
+    🔖
+  </span>
+
+  <span>
+    Saved Lessons
+  </span>
+
+</a>
+
+
+  </nav>
+
+
+</aside>
+
+
+
+<!-- =====================================================
+     APP
+===================================================== -->
+
+<div class="app-shell">
+
+
+<!-- =====================================================
+     TOPBAR
+===================================================== -->
+
+<header class="topbar">
+
+
+  <div class="topbar-left">
+
+
+    <button
+      class="menu-button"
+      id="menuButton"
+      type="button"
+      aria-label="Open menu"
+    >
+      ☰
+    </button>
+
+
+    <div>
+
+      <span class="topbar-label">
+        STUDENT PORTAL
+      </span>
+
+      <h1>
+        Schedule
+      </h1>
+
+    </div>
+
+
+  </div>
+
+
+
+  <div class="topbar-right">
+
+
+    <a
+      href="dashboard.html"
+      class="dashboard-link"
+    >
+      ← Dashboard
+    </a>
+
+
+    <a
+      href="profile.html"
+      class="student-profile"
+    >
+
+      <div
+        class="avatar"
+        id="topAvatar"
+      >
+        ST
+      </div>
+
+
+      <div>
+
+        <strong id="topStudentName">
+          Student
+        </strong>
+
+        <span>
+          Student
+        </span>
+
+      </div>
+
+    </a>
+
+
+  </div>
+
+
+</header>
+
+
+
+<!-- =====================================================
+     PAGE
+===================================================== -->
+
+<main class="schedule-content">
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="schedule-hero">
+
+
+  <div>
+
+
+    <span class="hero-badge">
+      📅 YOUR LEARNING PLAN
+    </span>
+
+
+    <h2>
+      Stay organized,
+      <span>stay ahead.</span>
+    </h2>
+
+
+    <p>
+      Keep track of assignments, quizzes, classes,
+      study sessions, and important academic events.
+    </p>
+
+
+  </div>
+
+
+  <button
+    class="add-event-button"
+    id="addEventButton"
+    type="button"
+  >
+    + Add Event
+  </button>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     SUMMARY CARDS
+===================================================== -->
+
+<section class="schedule-stats">
+
+
+  <article class="schedule-stat">
+
+    <div class="schedule-stat-icon purple">
+      📅
+    </div>
+
+    <div>
+
+      <span>
+        Upcoming Events
+      </span>
+
+      <strong id="upcomingEventCount">
+        0
+      </strong>
+
+    </div>
+
+  </article>
+
+
+  <article class="schedule-stat">
+
+    <div class="schedule-stat-icon orange">
+      📝
+    </div>
+
+    <div>
+
+      <span>
+        Assignments
+      </span>
+
+      <strong id="assignmentCount">
+        0
+      </strong>
+
+    </div>
+
+  </article>
+
+
+  <article class="schedule-stat">
+
+    <div class="schedule-stat-icon blue">
+      🧠
+    </div>
+
+    <div>
+
+      <span>
+        Quizzes
+      </span>
+
+      <strong id="quizCount">
+        0
+      </strong>
+
+    </div>
+
+  </article>
+
+
+  <article class="schedule-stat">
+
+    <div class="schedule-stat-icon green">
+      📚
+    </div>
+
+    <div>
+
+      <span>
+        Study Sessions
+      </span>
+
+      <strong id="studyCount">
+        0
+      </strong>
+
+    </div>
+
+  </article>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     CALENDAR LAYOUT
+===================================================== -->
+
+<div class="schedule-grid">
+
+
+<!-- =====================================================
+     CALENDAR
+===================================================== -->
+
+<section class="calendar-card">
+
+
+  <!-- CALENDAR TOOLBAR -->
+
+  <div class="calendar-toolbar">
+
+
+    <div class="calendar-title-area">
+
+      <button
+        class="calendar-nav-button"
+        id="previousButton"
+        type="button"
+        aria-label="Previous"
+      >
+        ‹
+      </button>
+
+
+      <button
+        class="calendar-nav-button"
+        id="nextButton"
+        type="button"
+        aria-label="Next"
+      >
+        ›
+      </button>
+
+
+      <div>
+
+        <span>
+          CALENDAR
+        </span>
+
+        <h2 id="calendarTitle">
+          August 2026
+        </h2>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="calendar-actions">
+
+
+      <button
+        class="today-button"
+        id="todayButton"
+        type="button"
+      >
+        Today
+      </button>
+
+
+      <div class="view-switch">
+
+        <button
+          class="view-button active"
+          type="button"
+          data-view="month"
+        >
+          Month
+        </button>
+
+        <button
+          class="view-button"
+          type="button"
+          data-view="week"
+        >
+          Week
+        </button>
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+
+  <!-- WEEK DAY HEADERS -->
+
+  <div
+    class="weekday-row"
+    id="weekdayRow"
+  >
+
+    <span>Sun</span>
+    <span>Mon</span>
+    <span>Tue</span>
+    <span>Wed</span>
+    <span>Thu</span>
+    <span>Fri</span>
+    <span>Sat</span>
+
+  </div>
+
+
+
+  <!-- CALENDAR GENERATED BY JS -->
+
+  <div
+    class="calendar-grid"
+    id="calendarGrid"
+  ></div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     RIGHT COLUMN
+===================================================== -->
+
+<aside class="schedule-sidebar">
+
+
+<!-- =====================================================
+     SELECTED DAY
+===================================================== -->
+
+<section class="side-card">
+
+
+  <div class="side-card-header">
+
+
+    <div>
+
+      <span>
+        SELECTED DAY
+      </span>
+
+      <h3 id="selectedDateTitle">
+        August 14
+      </h3>
+
+    </div>
+
+
+    <span>
+      🗓️
+    </span>
+
+
+  </div>
+
+
+  <div
+    class="selected-event-list"
+    id="selectedEventList"
+  ></div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     UPCOMING EVENTS
+===================================================== -->
+
+<section class="side-card">
+
+
+  <div class="side-card-header">
+
+
+    <div>
+
+      <span>
+        NEXT UP
+      </span>
+
+      <h3>
+        Upcoming
+      </h3>
+
+    </div>
+
+
+    <span>
+      ⏰
+    </span>
+
+
+  </div>
+
+
+  <div
+    class="upcoming-list"
+    id="upcomingList"
+  ></div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     EVENT LEGEND
+===================================================== -->
+
+<section class="side-card">
+
+
+  <div class="side-card-header">
+
+
+    <div>
+
+      <span>
+        CALENDAR KEY
+      </span>
+
+      <h3>
+        Event Types
+      </h3>
+
+    </div>
+
+
+  </div>
+
+
+  <div class="calendar-legend">
+
+
+    <div>
+      <span class="legend-dot assignment"></span>
+      Assignment
+    </div>
+
+
+    <div>
+      <span class="legend-dot quiz"></span>
+      Quiz
+    </div>
+
+
+    <div>
+      <span class="legend-dot class"></span>
+      Class
+    </div>
+
+
+    <div>
+      <span class="legend-dot study"></span>
+      Study
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+</aside>
+
+
+</div>
+
+
+</main>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     ADD EVENT MODAL
+===================================================== -->
+
+<div
+  class="modal-overlay"
+  id="eventModal"
+  aria-hidden="true"
+>
+
+
+  <div
+    class="modal-dialog"
+    role="dialog"
+    aria-modal="true"
+  >
+
+
+    <div class="modal-header">
+
+
+      <div>
+
+        <span>
+          PERSONAL SCHEDULE
+        </span>
+
+        <h2>
+          Add Event
+        </h2>
+
+        <p>
+          Add a study session or personal academic reminder.
+        </p>
+
+      </div>
+
+
+      <button
+        class="modal-close"
+        id="closeEventModal"
+        type="button"
+      >
+        ×
+      </button>
+
+
+    </div>
+
+
+
+    <form id="eventForm">
+
+
+      <div class="form-group">
+
+        <label for="eventTitle">
+          Event Title
+        </label>
+
+        <input
+          type="text"
+          id="eventTitle"
+          placeholder="Example: Review JavaScript"
+          maxlength="70"
+          required
+        >
+
+      </div>
+
+
+
+      <div class="form-row">
+
+
+        <div class="form-group">
+
+          <label for="eventDate">
+            Date
+          </label>
+
+          <input
+            type="date"
+            id="eventDate"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="eventTime">
+            Time
+          </label>
+
+          <input
+            type="time"
+            id="eventTime"
+            required
+          >
+
+        </div>
+
+
+      </div>
+
+
+
+      <div class="form-group">
+
+        <label for="eventType">
+          Event Type
+        </label>
+
+        <select
+          id="eventType"
+          required
+        >
+
+          <option value="study">
+            📚 Study Session
+          </option>
+
+          <option value="class">
+            🎓 Class
+          </option>
+
+          <option value="quiz">
+            🧠 Quiz Reminder
+          </option>
+
+        </select>
+
+      </div>
+
+
+
+      <div class="form-group">
+
+        <label for="eventDescription">
+          Notes
+        </label>
+
+        <textarea
+          id="eventDescription"
+          placeholder="Optional notes..."
+          maxlength="250"
+        ></textarea>
+
+      </div>
+
+
+
+      <div class="modal-actions">
+
+
+        <button
+          class="cancel-button"
+          id="cancelEventButton"
+          type="button"
+        >
+          Cancel
+        </button>
+
+
+        <button
+          class="save-event-button"
+          type="submit"
+        >
+          Add to Schedule
+        </button>
+
+
+      </div>
+
+
+    </form>
+
+
+  </div>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     EVENT DETAILS MODAL
+===================================================== -->
+
+<div
+  class="modal-overlay"
+  id="eventDetailsModal"
+  aria-hidden="true"
+>
+
+
+  <div class="modal-dialog details-dialog">
+
+
+    <div class="modal-header">
+
+
+      <div>
+
+        <span id="detailTypeLabel">
+          EVENT
+        </span>
+
+        <h2 id="detailTitle">
+          Event title
+        </h2>
+
+      </div>
+
+
+      <button
+        class="modal-close"
+        id="closeDetailsButton"
+        type="button"
+      >
+        ×
+      </button>
+
+
+    </div>
+
+
+
+    <div class="event-detail-body">
+
+
+      <div class="detail-row">
+
+        <div class="detail-icon">
+          📅
+        </div>
+
+        <div>
+
+          <span>
+            Date
+          </span>
+
+          <strong id="detailDate">
+            -
+          </strong>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="detail-row">
+
+        <div class="detail-icon">
+          ⏰
+        </div>
+
+        <div>
+
+          <span>
+            Time
+          </span>
+
+          <strong id="detailTime">
+            -
+          </strong>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="detail-row">
+
+        <div class="detail-icon">
+          📚
+        </div>
+
+        <div>
+
+          <span>
+            Course / Details
+          </span>
+
+          <strong id="detailMeta">
+            -
+          </strong>
+
+        </div>
+
+      </div>
+
+
+
+      <p
+        class="detail-description"
+        id="detailDescription"
+      ></p>
+
+
+    </div>
+
+
+
+    <div class="modal-actions">
+
+
+      <button
+        class="delete-event-button"
+        id="deleteEventButton"
+        type="button"
+      >
+        Delete
+      </button>
+
+
+      <button
+        class="save-event-button"
+        id="closeDetailsDoneButton"
+        type="button"
+      >
+        Done
+      </button>
+
+
+    </div>
+
+
+  </div>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     TOAST
+===================================================== -->
+
+<div
+  class="schedule-toast"
+  id="scheduleToast"
+></div>
+
+
+<script src="schedule.js"></script>
+<script src="avatar.js"></script>
+
+
+</body>
+
+</html>
