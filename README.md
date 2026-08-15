@@ -240,3 +240,26 @@ Built as a student portal / learning dashboard project.
 ---
 
 If you like this project, consider giving the repository a ⭐ on GitHub.
+
+```
+docs/screenshots/dashboard_1.png
+docs/screenshot/dashboard_2.png
+docs/screenshot/dashboard_3.png
+docs/screenshot/dashboard_4.png
+docs/screenshot/dashboard_5.png
+docs/screenshot/dashboard_6.png
+docs/screenshot/dashboard_7.png
+docs/screenshot/dashboard_8.png
+docs/screenshot/dashboard_9.png
+docs/screenshot/dashboard_10.png
+docs/screenshot/dashboard_11.png
+docs/screenshot/dashboard_12.png
+docs/screenshot/dashboard_13.png
+docs/screenshot/dashboard_14.png
+docs/screenshot/dashboard_15.png
+```
+
+
+
+
+
