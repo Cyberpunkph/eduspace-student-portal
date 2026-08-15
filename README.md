@@ -248,8 +248,6 @@ No open-source license has been added yet. Before allowing others to reuse or re
 
 Built as a student portal / learning dashboard project.
 
-Update this section with your name, GitHub profile, portfolio, or contact information before publishing.
-
 ---
 
 If you like this project, consider giving the repository a ⭐ on GitHub.
