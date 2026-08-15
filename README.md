@@ -243,20 +243,20 @@ If you like this project, consider giving the repository a ⭐ on GitHub.
 
 ```
 docs/screenshots/dashboard_1.png
-docs/screenshot/dashboard_2.png
-docs/screenshot/dashboard_3.png
-docs/screenshot/dashboard_4.png
-docs/screenshot/dashboard_5.png
-docs/screenshot/dashboard_6.png
-docs/screenshot/dashboard_7.png
-docs/screenshot/dashboard_8.png
-docs/screenshot/dashboard_9.png
-docs/screenshot/dashboard_10.png
-docs/screenshot/dashboard_11.png
-docs/screenshot/dashboard_12.png
-docs/screenshot/dashboard_13.png
-docs/screenshot/dashboard_14.png
-docs/screenshot/dashboard_15.png
+docs/screenshots/dashboard_2.png
+docs/screenshots/dashboard_3.png
+docs/screenshots/dashboard_4.png
+docs/screenshots/dashboard_5.png
+docs/screenshots/dashboard_6.png
+docs/screenshots/dashboard_7.png
+docs/screenshots/dashboard_8.png
+docs/screenshots/dashboard_9.png
+docs/screenshots/dashboard_10.png
+docs/screenshots/dashboard_11.png
+docs/screenshots/dashboard_12.png
+docs/screenshots/dashboard_13.png
+docs/screenshots/dashboard_14.png
+docs/screenshots/dashboard_15.png
 ```
 
 
