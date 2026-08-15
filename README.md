@@ -232,6 +232,7 @@ Built as a student portal / learning dashboard project.
 
 If you like this project, consider giving the repository a ⭐ on GitHub.
 
+##  📸 Preview
 ![EduSpace dashboard_1](docs/screenshots/dashboard_1.png)
 ![EduSpace dashboard_2](docs/screenshots/dashboard_2.png)
 ![EduSpace dashboard_3](docs/screenshots/dashboard_3.png)
